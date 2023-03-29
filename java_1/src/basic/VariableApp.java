@@ -56,6 +56,15 @@ public class VariableApp {
 		int kor= 88, eng= 90;//연산 결과를 변수에 저장
 		int tot= kor+eng;
 		System.out.println("점수합계= " +tot);
+		
+		System.out.println("=========================");
+		//변수의 값이 저장되어 있지 않은 상태에서 변수를 사용할 경우 에러 발생
+		//int count;
+		//System.out.println("count =" + count);
+		
+		//변수에 저장 불가능한 값을 저장할 경우 에러 발생
+		//int count=10.0;
+		//System.out.println("count= " +count);
 				
 	}
 
