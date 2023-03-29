@@ -41,7 +41,6 @@ public class VariableApp {
 		//문자열이 나오기 전에는 숫자는 더해짐
 		System.out.println(""+2+0+2+3+ "년은 토끼띠해입니다"); 
 		//"" : 비어있는 문자열 - NullString
-		//문자열이 나오기 전에는 숫자는 더해짐
 		System.out.println("=========================");
 		int num1 = 100, num2= 200;
 		System.out.println("연산결과= " +num1+num2);
