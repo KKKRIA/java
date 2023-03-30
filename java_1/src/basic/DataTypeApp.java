@@ -45,6 +45,8 @@ public class DataTypeApp {
 		long a5=100;//자료형이 큰 변수에 작은 리터럴 저장 가능 
 		System.out.println("a5 = "+a5);
 		System.out.println("==============================================================");
+		
+		
 		//실수형(DoubleType) 리터럴 : 소숫점이 있는 숫자값
 		// => Java에서 실수형 리터럴은 기본적으로 8Byte(Double)로 표현 >> 부동 소수점 형식으로 숫자값 표현
 		System.out.println("<<실수형(DoubleType)>>");
@@ -73,6 +75,54 @@ public class DataTypeApp {
 		
 		//문자형 리터럴은 내부적으로 약속된 정수값(0~65535)으로 표현 - 유니코드(Unicode)
 		// => 'A' : 65, 'a' : '97', '0' : 48, ' ' : 32, '\n' : 13, '가' : 44032 - 완성형
+		
+		System.out.println("<<문자형 (CharacterType)>>");
+		System.out.println("문자값(2Byte) =" +'A');
+		System.out.println("문자값(2Byte) =" +'가');
+		System.out.println("문자값(2Byte) =" +'\'');
+		System.out.println("문자값(2Byte) =" +'\\');
+		
+		//문자값을 표현하기 위한 자료형 -char(2byte)
+		char c1='A'; //문자형 변수에는 문자값에 대한 약속된 정수값이 저장
+		char c2=65; //문자형 변수에는 문자값대신 약속된 정수값 저장
+		char c3='a'-32; //문자형 변수에는 문자값대신 약속된 정수값 저장
+		
+		System.out.println("c1 = "+c1);
+		System.out.println("c2 = "+c2);
+		System.out.println("c3 = "+c3);
+		
+		char c4 = 45000;
+		System.out.println("c4 = "+c4);
+		System.out.println("==============================================================");
+		
+		
+		//논리형(BooleanType) 리터럴 : false(거짓), true(참)
+		// => Java에서 논리형 리터럴은 기본적으로 1Byte(BooleanType)로 표현
+		System.out.println("<<논리형(BooleanType)>>");
+		System.out.println("논리값(1Byte) = "+false);
+		System.out.println("논리값(1Byte) = "+true);
+		//관계 연산자(비교 연산자)를 이용한 연산식의 결과값으로 논리형 리터럴 제공
+		System.out.println("논리값(1Byte) = "+(20<10));
+		System.out.println("논리값(1Byte) = "+(20>10));
+		
+		//논리값을 표현하기 위한 자료형 - boolean(1byte)
+		boolean d1=false;
+		boolean d2=20>10;
+		
+		System.out.println("d1 = " +d1);
+		System.out.println("d2 = " +d2);
+		System.out.println("==============================================================");
+		
+		
+		//문자열(StringType) 리터럴 : " " 안에 0개 이상의 문자들로 표현 - String 객체
+		// => 문자열은 원시형(기본형)이 아닌 참조형으로 String 클래스로 표현
+		System.out.println("<<문자열 (StringType)>>");
+		System.out.println("문자열 = " +"홍길동");
+		System.out.println("문자열 = " +"유관순 열사가 \"대한독립 만세\"를 외쳤습니다");
+		
+		//문자열을 표현하기 위한 자료형 : String 클래스
+		String name = "임꺽정";
+		System.out.println("이름 = " +name);
 		
 	
 	}
