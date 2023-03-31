@@ -36,7 +36,7 @@ public class OperatorExample {
 
 		
 		int plane=150_000_000, cnt=20;
-		long money=(long)(cnt>=15?plane*0.75:plane)*cnt; //cnt가 15보다 크거나 같다면 비행기값에 0.75곱하고
+		long money=(long)(cnt>=15?plane*0.75:plane)*cnt; //cnt가 15보다 크거나 같다면 비행기값에 0.75곱하고 아니면 기본 비행기값
 		System.out.println("지불금액= " +money);
 		
 		
