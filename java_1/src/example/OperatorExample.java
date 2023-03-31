@@ -8,7 +8,7 @@ public class OperatorExample {
 		//245678초를 일시분초 형식으로 변환하여 출력하세요.
 		int tot=245678;
 		int day= tot/(60*60*24);
-		int hour= (tot-day*60*60*24)/(60*60);
+		int hour= (tot-day*60*60*24)/(60*60);	
 		int minute= (tot-day*60*60*24-hour*3600)/60;
 		int second= tot%60;
 

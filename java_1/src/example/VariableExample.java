@@ -27,26 +27,25 @@ public class VariableExample {
 		System.out.println("======================================================");
 		//10명의 전체 몸무게가 759Kg인 경우 평균 몸무게를 계산하여 출력하세요.
 		
-		int person=10, weight=759;
-		double ave1= (double)weight/person;
-		System.out.println("평균몸무게= " +ave1);
+		int person=10, totWeight=759;
+		double ave1= (double)totWeight/person; //둘다 더블로
+		System.out.println("평균몸무게= " +ave1 +"kg");
 
 		
-
 		System.out.println("======================================================");
 
 		//이름이 [홍길동]인 학생이 국어점수 89점, 영어점수 93점, 수학점수 95점을 받은 경우
 		//총점과 평균을 계산하여 이름, 총점, 평균을 출력하세요.
 		//단, 평균은 소숫점 한자리까지만 출력하고 나머지는 절삭 처리 하세요.
 
+		String name="홍길동"; //문자는 String
 		int kor =89, eng=93, math=95;
+		
 		int tot= kor+eng+math; //총점계산
 		double ave=tot/3.; //평균계산
-		String name="홍길동";
-		System.out.println("이름= "+name + ", 총점= "+tot + ", 평균= "+ave);
+		System.out.println("이름= "+name + ", 총점= "+tot + ", 평균= "+(int)(ave*10)/10.);
 
 	
-
 
 		System.out.println("======================================================");
 
