@@ -31,14 +31,12 @@ public class OperatorExample {
 		
 
 		System.out.println("===============================================");
-
-	
 		//한대의 가격이 1억 5천원만인 비행기를 20대 구매할 경우 지불해야될 금액을 계산하여 출력하세요. 
 		//단, 15대 이상 구매할 경우 1대당 25%의 할인율을 적용하여 계산하세요.
 
 		
 		int plane=150_000_000, cnt=20;
-		long money=(long)(cnt>=15?plane*0.75:plane)*cnt; //cnt가 15보다 크거나 같다면 
+		long money=(long)(cnt>=15?plane*0.75:plane)*cnt; //cnt가 15보다 크거나 같다면 비행기값에 0.75곱하고
 		System.out.println("지불금액= " +money);
 		
 		
