@@ -92,11 +92,14 @@ public class DataTypeApp {
 		System.out.println("c4 = "+c4);
 		System.out.println("==============================================================");
 		
+		
 		//논리형(BooleanType) 리터럴 : false(거짓), true(참)
 		// => Java에서 논리형 리터럴은 기본적으로 1Byte(BooleanType)로 표현
+		
 		System.out.println("<<논리형(BooleanType)>>");
 		System.out.println("논리값(1Byte) = "+false);
 		System.out.println("논리값(1Byte) = "+true);
+		
 		//관계 연산자(비교 연산자)를 이용한 연산식의 결과값으로 논리형 리터럴 제공
 		System.out.println("논리값(1Byte) = "+(20<10));
 		System.out.println("논리값(1Byte) = "+(20>10));
@@ -108,6 +111,7 @@ public class DataTypeApp {
 		System.out.println("d1 = "+d1);
 		System.out.println("d2 = "+d2);
 		System.out.println("==============================================================");
+		
 		
 		//문자열(StringType) 리터럴 : " " 안에 0개 이상의 문자들로 표현 - String 객체
 		// => 문자열은 원시형(기본형)이 아닌 참조형으로 String 클래스로 표현
