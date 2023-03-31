@@ -4,19 +4,32 @@ public class ForExample {
 	public static void main(String[] args) {
 		//본인 이름을 화면에 7번 출력하세요.
 		//ex) 홍길동 홍길동 홍길동 홍길동 홍길동 홍길동 홍길동
-
-
+		
+		for(int i=1; i<=7; i++) {
+			System.out.print("김리아 ");
+		}
 		System.out.println();
 		System.out.println("=========================================");
+		
+		
 		//1~10 범위의 정수 중 홀수를 화면에 출력하세요.
 		//ex) 1     3     5     7     9
-
-
+		
+		for(int i=1; i<=10; i+=2) {
+			if(i%1==0) {
+				System.out.print(i+"\t");
+			}
+		}
+		System.out.println();
 		System.out.println("=========================================");
+		
+		
 		//1~100 범위의 정수에서 3의 배수들의 합계와 5의 배수들의 합계를 계산하여
 		//3의 배수의 합계에서 5의 배수의 합계를 뺀 결과값을 출력하세요.
 		//ex) 결과 = 633
-
+		
+		
+		
 
 		System.out.println("=========================================");
 		//구구단 중 7단을 화면에 출력하세요.
