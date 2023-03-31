@@ -17,6 +17,11 @@ package basic;
 // => 조건식이 여러 개인 경우 명령을 구문하여 블럭 내부에 작성된 명령 실행
 // => 마지막 else에 작성된 명령은 모든 조건식이 거짓인 경우 실행 - else 생략 가능 
 
+//프로그램 흐름을 파악하기위한 이클립스 기능 -Debug Perspective사용
+// =>중지점 (BreakPoint)설정 - [F11] :Debug 기능 실행 단축키 -Debug Perspective 변환 
+//    - [F6] : 현재 스레드 위치의 명령을 하나씩 실행 >> 반복 - Debug 처리완료 
+//    - 프로그램 강제 종료(Terminate : Ctrl +F2) - Java Perspective 변환 - 중지점 제거
+
 
 public class IfApp {
 	public static void main(String[] args) {
@@ -30,7 +35,7 @@ public class IfApp {
 		 */   // su값이 50보다 크거나 같다면 불럭안에 내용 실행해주세요
 
 		//if 구문에 명령이 하나만 존재할 경우 {} 기호 생략 가능
-				if(su >= 50) System.out.println("su = "+su);
+		if(su >= 50) System.out.println("su = "+su);
 				
 				
 		System.out.println("==============================================================");
@@ -116,12 +121,16 @@ public class IfApp {
 		
 		//변수값이 0~100 범위의 유효값인지 아닌지를 구분하여 출력하는 프로그램 작성
 		// => 입력값에 대한 유효성 검증
+		
 		if(jumsu >= 0 && jumsu <= 100) {
 			//System.out.println("[결과]0~100 범위의 정상적인 점수가 입력 되었습니다.");
 			
 			//변수값으로 등급을 구분하여 출력하는 프로그램 작성
 			//100 ~ 90 : A, 89 ~ 80 : B, 79 ~ 70 : C, 69 ~ 60 : D, 59 ~ 0 : F
+			
+			/*
 			String grade="";//학점을 저장하기 위한 변수
+			
 			if(jumsu <=100 && jumsu >= 90) {
 				grade = "A";
 			} else if(jumsu <=89 && jumsu >= 80) {
@@ -133,11 +142,29 @@ public class IfApp {
 			} else if(jumsu <=59 && jumsu >= 0) {
 				grade = "F";
 			}
+			*/
+			
+			
+			String grade;//학점을 저장하기 위한 변수
+			
+			if(jumsu >= 90) {
+				grade = "A";
+			} else if(jumsu >= 80) {
+				grade = "B";
+			} else if(jumsu >= 70) {
+				grade = "C";
+			} else if(jumsu >= 60) {
+				grade = "D";
+			} else  {
+				grade = "F"; //모든조건이 거짓이면 무조건 실행되는 명령
+			}
+			
+			
 			
 			System.out.println("[결과]"+jumsu+"점 = "+grade+"학점");
-		} else {
-			System.out.println("[결과]0~100 범위를 벗어난 비정상적인 점수가 입력 되었습니다.");
-		} //점수가 0보다 크거나 같고 또는 
+			} else {
+				System.out.println("[결과]0~100 범위를 벗어난 비정상적인 점수가 입력 되었습니다.");
+			} //점수가 0보다 크거나 같고 또는 
 	
 		
 		System.out.println("==============================================================");
