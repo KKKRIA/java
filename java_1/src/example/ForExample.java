@@ -21,8 +21,12 @@ public class ForExample {
 		//ex) 1     3     5     7     9
 
 		
+		for(int i=1; i<=9; i+=2) {
+			System.out.print(i+"\t");
+		}
+		
 		for(int i=1; i<=10; i+=2) {
-			if(i%1==0) {
+			if(i%2!=0) { //짝수가 아닐때 홀수일때
 				System.out.print(i+"\t");
 			}
 		}
@@ -41,15 +45,14 @@ public class ForExample {
 
 		int totThree=0, totFive=0;
 		for(int i=1; i<=100; i++) {
-			if(i%3==0) {
+			if(i%3==0) { // <- 명령이 하나면 블럭 생략가능
 				totThree+=i; //totThree = totThree + i
 			}
 			if(i%5==0) {
 				totFive+=i; //totFive = totFive + i
 			}
 		}
-		int tot= totThree - totFive;
-		System.out.println("3의 배수의 합계에서 5의 배수의 합계를 뺀 결과 = " + tot);
+		System.out.println("3의 배수의 합계에서 5의 배수의 합계를 뺀 결과 = " + (totThree - totFive));
 
 
 
@@ -63,24 +66,26 @@ public class ForExample {
 		//    7 * 9 = 63
 
 
+		int dan=7;
 		for(int i=1; i<=9; i++) {
-			System.out.println("7 *" +i + " = " +7*i);
+			System.out.println(dan + "*" +i + " = " +(dan*i));
 		}
 
+			
+		
+		
 		System.out.println("=========================================");
 
 		//5!의 결과값을 출력하세요.(5! = 5 * 4 * 3 * 2 * 1)
 		//ex) 5! = 120
 
 		
-		/*int fac=1;
-
-		for(int i=5; i>0; i--) {
-			fac *=1;
+		int num=5, fac=1;
+		for(int i=num; i>1; i--) {
+			fac *=i;
 		}
 		System.out.println("5! =" +fac );
-		*/
-
+		
 
 		System.out.println("=========================================");
 		//두 변수에 저장된 정수값 사이의 정수들을 화면에 출력하세요.
@@ -103,16 +108,23 @@ public class ForExample {
 
 
 
-		int begin=36, end=57, cnt=0;
+		int begin=36, end=57;
+		int count=0; //출력갯수를 저장할 변수
+		
 		for(int i =begin; i<=end; i++) {
-			cnt++;
 			System.out.print(i+"\t");
-			if(cnt%7==0) System.out.println();
+			count++;
+			if(count%7==0) {
+				System.out.println();
+			}
 		}
-		if(cnt % 7!=0) System.out.println();
+		System.out.println();
+		
+		
+		System.out.println("=========================================");
 
 		
-		//int begin=36, ennd=57;
+	
 		
 
 
