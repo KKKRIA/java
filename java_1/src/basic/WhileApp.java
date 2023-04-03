@@ -61,7 +61,7 @@ public class WhileApp {
 		}
 		System.out.println("1~" +x+"범위의 합계" + sum);
 		
-		
+		System.out.println("=======================================================");
 
 		
 		
