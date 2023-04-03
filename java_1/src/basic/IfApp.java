@@ -17,7 +17,7 @@ package basic;
 // => 조건식이 여러 개인 경우 명령을 구문하여 블럭 내부에 작성된 명령 실행
 // => 마지막 else에 작성된 명령은 모든 조건식이 거짓인 경우 실행 - else 생략 가능 
 
-//프로그램 흐름을 파악하기위한 이클립스 기능 -Debug Perspective사용
+//프로그램 흐름을 파악하기위한 이클립스 기능 -Debug Perspective사용 디버그
 // =>중지점 (BreakPoint)설정 - [F11] :Debug 기능 실행 단축키 -Debug Perspective 변환 
 //    - [F6] : 현재 스레드 위치의 명령을 하나씩 실행 >> 반복 - Debug 처리완료 
 //    - 프로그램 강제 종료(Terminate : Ctrl +F2) - Java Perspective 변환 - 중지점 제거

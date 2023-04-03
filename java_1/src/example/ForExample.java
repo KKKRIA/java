@@ -62,7 +62,6 @@ public class ForExample {
 
 		for(int i=1; i<=9; i++) {
 			System.out.println("7 *" +i + " = " +7*i);
-
 		}
 
 		System.out.println("=========================================");
@@ -110,6 +109,9 @@ public class ForExample {
 		if(cnt % 7!=0) System.out.println();
 
 		*/
+		
+		int begin=36, ennd=57;
+		
 
 
 
