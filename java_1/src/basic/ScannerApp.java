@@ -33,7 +33,7 @@ public class ScannerApp {
 		
 		System.out.println("결과" +name+"님의 나이는"+age+"살입니다");
 		
-//		scanner.close() : scanner 객체가 사용한 입력스트림을 제거하는 메소드
+		//scanner.close() : scanner 객체가 사용한 입력스트림을 제거하는 메소드
 		scanner.close();
 	
 	}
