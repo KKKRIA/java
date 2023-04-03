@@ -13,7 +13,6 @@ public class ForExample {
 			System.out.print("김리아 ");
 		}
 		System.out.println();
-
 		
 		System.out.println("=========================================");
 
@@ -27,6 +26,10 @@ public class ForExample {
 				System.out.print(i+"\t");
 			}
 		}
+		
+		/*for(int i=2;i<=10;i+=2) {
+			System.out.print(i+"\t");
+		}*/
 
 		System.out.println();
 
@@ -100,7 +103,7 @@ public class ForExample {
 
 
 
-	/*	int begin=36, end=57, cnt=0;
+		int begin=36, end=57, cnt=0;
 		for(int i =begin; i<=end; i++) {
 			cnt++;
 			System.out.print(i+"\t");
@@ -108,9 +111,8 @@ public class ForExample {
 		}
 		if(cnt % 7!=0) System.out.println();
 
-		*/
 		
-		int begin=36, ennd=57;
+		//int begin=36, ennd=57;
 		
 
 
