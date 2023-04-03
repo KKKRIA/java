@@ -7,60 +7,40 @@ public class IfExample {
 	public static void main(String[] args) {
 
 		//변수에 저장된 문자값을 출력하세요.
-
 		//단, 변수에 저장된 문자값이 소문자인 경우 대문자로 변환하여 출력하세요.
 
-		
-
 		char mun='x';
-
 		 if(mun >='a' && mun<='z') {
-
 			 mun -=32;
-
 		 }
 
 		System.out.println(mun);
 
-		
-
 		System.out.println("============================================================");
 
-		
 
 		
-
-		
-
 		//변수에 저장된 정수값이 4의 배수인지 아닌지를 구분하여 출력하세요.
 
 		int num=345644;
-
 		if(num%4==0) {
-
 			System.out.println("4의 배수입니다");
 		} else {
 			System.out.println("4의 배수가 아닙니다");
 		}
 
-		
-
 
 
 		System.out.println("============================================================");
 
 
 
-		
-
 		//올해가 평년인지 윤년을 구분하여 출력하세요.
 		// => 년도를 4로 나누어 나머지가 0인 경우 윤년
 		// => 위 조건을 만족하는 년도 중 100으로 나누어 나머지가 0인 경우 평년
 		// => 위 조건을 만족하는 년도 중 400으로 나누어 나머지가 0인 경우 윤년
-
-		
+	
 		int year=2023;
-
 
 		if (year%4==0 && year%100 == 0 || year%400 == 0) {
 			System.out.println(year + "윤년");
@@ -68,8 +48,6 @@ public class IfExample {
 		else {
 			System.out.println(year + "평년");
 		}
-
-
 
 		System.out.println("============================================================");
 
@@ -89,7 +67,6 @@ public class IfExample {
 		double ave=tot/3.;
 		ave= (int)(ave*100)/100.;
 
-
 		if((kor<0 || kor>100) || (eng<0 || eng>100) || (mat<0 || mat>100)){
 			System.exit(0);
 		}
@@ -108,10 +85,7 @@ public class IfExample {
 			grade = "F"; 
 		}
 
-
 		System.out.println("이름 : " + name + ", 총점 : " + tot + ", 평균" + ave+", 학점:"+grade );
-
-	
 
 
 		System.out.println("============================================================");
