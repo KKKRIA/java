@@ -6,7 +6,7 @@ package basic;
 public class ContinueApp {
 	public static void main(String[] args) {
 		for(int i=1;i<=5;i++) {
-			if(i==3) continue;
+			if(i==3) continue; //여기부터 아래 명령 실행하지 않고 위에서 부터 재실행
 			System.out.println(i+"\t");
 		}
 		

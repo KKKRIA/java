@@ -28,7 +28,7 @@ public class TotalTwoExample {
 
 		
 
-		int sum=0;
+		int sum=0, tot=0;
 
 		
 

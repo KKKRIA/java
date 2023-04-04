@@ -26,7 +26,7 @@ public class WhileApp {
 		//1~100 범위의 정수들의 합계를 계산하여 출력하는 프로그램
 		int j=1, tot=1;
 		do {
-			tot+=j;
+			tot+=j;  //토탈에 j를 누적
 			j++;
 		} while (j<=100);
 		System.out.println("1~100 범위의 정수들의 합계= "+ tot);
@@ -52,6 +52,7 @@ public class WhileApp {
 		
 		//1~X 범위의 정수들의 합계가 300 이상이 만들어지려면 X가 얼마인지 계산하여 출력하는 
 		//프로그램 작성 - 1+2+3+...+X >=300
+		//(명확하지 않을때 while, (300까지- 명확하면 for))
 		
 		int x=0, sum=0; //x:1씩 증가되는 정수값 저장, 
 	
