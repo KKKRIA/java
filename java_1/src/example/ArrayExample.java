@@ -21,3 +21,4 @@ public class ArrayExample {
 	
 }
 
+//어레이 카운팅 참고
