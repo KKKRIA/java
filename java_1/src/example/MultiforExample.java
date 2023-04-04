@@ -73,7 +73,8 @@ public class MultiforExample {
 		//★★★★★★★
 		//★★★★★★★★★
 
-	/*	
+		
+
 		int count=1;
 
 		for(int i=1; i<=5; i++) { //행
@@ -83,21 +84,21 @@ public class MultiforExample {
 			System.out.println();
 			count +=2;
 		}
-*/
+	
+		
 		
 
-
-		for(int i=1; i<=9; i+=2) { //행
-			for(int j=1; j<=9; j++) {//열
+/*
+		for(int i=1; i<=9; i+=2) { //행 
+			for(int j=1; j<=9; j++) {//열 
 				if(j<=i){
 				System.out.print("★");
 				}
 			}
 			System.out.println();
-		
 		}
 		
-
+*/
 	
 
 		
