@@ -27,7 +27,7 @@ public class InputCheckApp {
 		}
 		*/
 		
-		/*
+		/*  do while 사용시 비정상적인 score값을 안넣어도됨
 		int score;
 		do {
 			System.out.print("점수 입력[0~100] >> ");
@@ -39,7 +39,7 @@ public class InputCheckApp {
 		*/		
 		
 		int score;
-		while(true) {//조건식 대신 [true]를 사용하면 무조건 참 - 무한루프
+		while(true) {//조건식 대신 [true]를 사용하면 무조건 참 - 무한루프 
 			System.out.print("점수 입력[0~100] >> ");
 			score=scanner.nextInt();
 			//입력값이 정상적인 값인 반복문 종료
