@@ -188,7 +188,7 @@ public class MultiForApp {
 		 
 		 
 		 for(int i=1; i<=5; i++) {//행 
-			 for(int j=1; j<=(5-i); j++) {//열 
+			 for(int j=1; j<=(5-i); j++) {//열  흰별이 4개
 				 System.out.print("☆");
 			 }
 			 for(int j=1; j<=i; j++) {//열 
