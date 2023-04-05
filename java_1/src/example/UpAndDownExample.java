@@ -21,10 +21,8 @@ public class UpAndDownExample {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		//int count=0;
 
 		// => 1~100 범위의 정수값을 난수로 제공받아 변수에 저장
-
 		int su=(int)(Math.random()*100)+1;
 
 		
