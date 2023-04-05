@@ -23,43 +23,57 @@ public class UpAndDownExample {
 		Scanner scanner=new Scanner(System.in);
 		//int count=0;
 
-		// => 1~100 범위의 정수값을 난수로 제공받아 저장
+		// => 1~100 범위의 정수값을 난수로 제공받아 변수에 저장
 
 		int su=(int)(Math.random()*100)+1;
 
+		
+		
+		//정답 상태를 저장하기 위한 변수
+		// => false : 정답을 맞추지 못한 상태, true : 정답을 맞춘 상태
+		boolean result=false;
+		
+		
+		
 		//사용자에게 난수값 하나를 키보드로 입력받아 저장 
 		// => 입력값이 1~100 범위가 아닌 경우 메세지 출력 후 재입력
 
-		int user;
-		int cnt; //10번
-
-		for(cnt=1;cnt<=10;cnt++) {
-
+		
+		//난수값을 입력받아 맞추는 기회를 10번 제공하기 위한 반복문
+		
+		for(int cnt=1; cnt<=10; cnt++) {
+			
+			//사용자로부터 정수값을 입력받아 변수에 저장
+			// => 비정상적인 값이 입력된 경우 에러 메세지를 출력하고 재입력되도록 반복문 사용
+			
+			int user;
+			
 			while(true) {
-				System.out.println("난수값을 입력하세요 >>");
+				System.out.println(cnt+"번째 정수값 입력 [1~100] >>");
 				user=scanner.nextInt();
-
-				if(user>=1 && user<=100) break;
+				if(user>=1 && user<=100) break; //정상적인 값이 입력된 경우 반복문 종료
 				System.out.println("[에러] 1~100의 범위가 아닙니다." );
 			}
 		
-
+			
+			//난수값과 입력값을 비교하여 입력
 			if(su==user) {
-				System.out.println("정답입니다");break;
-			}
-			if(su>user) {
-				System.out.println("큰값 입력");
+				System.out.println("정답입니다" + cnt+"번만에 맞췄습니다");
+				result=true;
+				break; //for(cnt=1;cnt<=10;cnt++) 종료
+			}else if(su>user) {
+				System.out.println("[결과]"+su +"보다 큰값을 입력해주세요");
 			}else {
-				System.out.println("작은값 입력");
+				System.out.println("[결과]"+su +"보다 작은값을 입력해주세요");
 			}
 		}
 
 	
-		if(cnt == 11) {
+		if(!result) {
 				System.out.println("10번안에 못맞춤, 답 = "+su);
 			}
 
-		
+		scanner.close();
 
 		
 
@@ -67,25 +81,7 @@ public class UpAndDownExample {
 
 		
 
-		// => 난수값과 입력값이 같은 경우 입력 횟수 출력 후 프로그램 종료
-
-		
-
-		
-
-		/*for(int i=0; i<su; i++) {
-
-			if(su==user) break; {
-
-			System.out.println("입력횟수 = "+ cnt);
-
-			}
-
-		}*/
-
-		
-
-		
+	
 
 		
 
