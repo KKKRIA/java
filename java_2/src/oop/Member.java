@@ -32,11 +32,13 @@ public class Member {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
 	//매개변수가 있는 생성자
 	// => 매개변수에 전달되어 저장된 값을 필드의 초기값으로 저장
 	
 	//이클립스를 사용하여 매개변수가 있는 생성자 선언 가능
 	// => [Alt]+[Shift]+[S] >> 팝업메뉴 - [O] >> 필드 선택 >> Generate
+	
 	
 	public Member(String id) {
 		this.id = id;
@@ -59,7 +61,6 @@ public class Member {
 	public String getId() {
 		return id;
 	}
-	
 
 	public void setId(String id) {
 		this.id = id;
@@ -80,6 +81,7 @@ public class Member {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	
 	//필드값을 확인하기 위해 필드값을 출력하는 메소드
 	public void display() {

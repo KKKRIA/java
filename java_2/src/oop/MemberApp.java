@@ -26,6 +26,7 @@ public class MemberApp {
 		System.out.println("이메일 = "+member1.getEmail());
 		*/
 		
+	
 		member1.display();
 		System.out.println("==============================================================");
 		
