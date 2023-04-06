@@ -41,24 +41,48 @@ public class Car {
 		System.out.println(modelName +"의 시동을 켰습니다.");
 	}
 	
+	
+	
 	void stopEngine(){ //시동 오프(Off)
 		engineStatus=false;
 		System.out.println(modelName +"의 시동을 껐습니다.");
 	}
 	
+	
+	
 	void speedUp(int speed){ //속도증가
+		if(!engineStatus) { //엔진이 꺼져있는 경우
+			System.out.println(modelName+"의 자동차 시동이 꺼져있습니다.");
+			return; //메소드 종료
+		}
+		if(currentSpeed+speed > 150) {
+			speed=150-currentSpeed;
+		}
 		currentSpeed+=speed;
 		System.out.println(modelName +"의 속도가" + speed + "km/h 증가 되었습니다. 현재속도는" + currentSpeed+ "km/h 입니다.");
 	}
 	
+	
+	
 	void speedDown(int speed){//속도감소 
+		if(!engineStatus) { //엔진이 꺼져있는 경우
+			System.out.println(modelName+"의 자동차 시동이 꺼져있습니다.");
+			return; //메소드 종료
+		}
+		if(currentSpeed< speed) {
+			speed=currentSpeed;
+		}
 		currentSpeed-=speed;
 		System.out.println(modelName +"의 속도가" + speed + "km/h 감소 되었습니다. 현재속도는" + currentSpeed+ "km/h 입니다.");
 	}
+	
+	
 	
 	void speedZero() { //이동 중지
 		currentSpeed=0;
 		System.out.println(modelName +"의 자동차가 멈췄습니다");
 	}
+	
+	
 	
 }
