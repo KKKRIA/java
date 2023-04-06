@@ -34,12 +34,10 @@ public class Car {
 	
 	//생성자(Constructor) : 
 	//생성자를 선언하지 않으면 매개변수가 없는 기본 생성자가(Default Constructor)가 자동으로 생성되어 제공
-	
-	
-	
+
 	
 	//메소드(Method) : 필드를 사용하여 메소드의 명령으로 필요한 기능을 제공되도록 작성
-	void startEngine(){//시동 온(On) 결과 반환안할꺼라서 보이드
+	void startEngine(){ //시동 온(On) , 결과 반환안할꺼라서 보이드
 		engineStatus=true;
 		System.out.println(modelName +"의 시동을 켰습니다.");
 	}
