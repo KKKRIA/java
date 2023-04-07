@@ -15,8 +15,8 @@ public class RuntimeApp {
 		//Runtime runtime=new Runtime();
 		
 		//Runtime.getRuntime() : Runtime 객체를 반환하는 메소드
-		//=>정적 메소드이므로 클래스를 이용하여 호출 가능
-		// =>getRuntime() 메소드를 여러번 호출해도 같은 객체를 반환
+		// => 정적 메소드이므로 클래스를 이용하여 호출 가능
+		// => getRuntime() 메소드를 여러번 호출해도 같은 객체를 반환
 		Runtime runtime1=Runtime.getRuntime();
 		Runtime runtime2=Runtime.getRuntime();
 		
