@@ -53,7 +53,6 @@ public class StudentApp {
 			if(students [i]!=null) {
 				students[i].display();
 			}
-			
 		}
 		
 		
@@ -61,8 +60,6 @@ public class StudentApp {
 		System.out.println("===========================================================");
 		
 		//	Student[] students = 
-	
-		
 		//for(Students student : student){
 		
 				
