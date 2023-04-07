@@ -88,7 +88,7 @@ public class Method {
 	 
 	int returnTot(int num1, int num2) {
 		int tot=0;
-		for(int i=num1;i<=num2;i++) {
+		for(int i=num1;i<=num2;i++) {  
 			tot+=i;
 		}
 		
