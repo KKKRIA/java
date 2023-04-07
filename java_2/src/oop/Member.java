@@ -4,8 +4,7 @@ package oop;
 // => VO(Value Object) 클래스 : 특정 대상의 값을 저장할 목적의 객체를 생성하기 위한 클래스
 
 public class Member {
-	//필드 선언 : 객체를 생성하면 객체의 필드에는 기본값(숫자형 : 0, 논리형 : false, 
-	//참조형 : null)이 초기값으로 자동 저장
+	//필드 선언 : 객체를 생성하면 객체의 필드에는 기본값(숫자형 : 0, 논리형 : false, 참조형 : null)이 초기값으로 자동 저장
 	
 	private String id;
 	private String name;

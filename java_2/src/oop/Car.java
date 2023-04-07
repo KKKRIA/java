@@ -116,7 +116,7 @@ public class Car {
 	// 이클립스에서는 은닉화 처리된 필드에 대한 Getter 메소드와 Setter 메소드를 생성하는 기능
 	// 단축키 : [Alt]+[Shift]+[s] >> 팝업메뉴 - [R] >> 필드 선택 >> Generate
 
-	public boolean isEngineStatus() {
+	public boolean isEngineStatus() { //블리언이라서 is
 		return engineStatus;
 	}
 
