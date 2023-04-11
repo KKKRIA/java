@@ -31,8 +31,7 @@ public abstract class Employee {
 	private int empNo;
 	private String empName;
 	
-	//상수필드(Constant Field) : 프로그램에서 값(리터럴) 대신 사용하기 위한 의미있는 단어로
-	//제공되는 필드값
+	//상수필드(Constant Field) : 프로그램에서 값(리터럴) 대신 사용하기 위한 의미있는 단어로 제공되는 필드값
 	//형식) public static final 자료형 변수명 = 초기값;
 	// => 상수명은 대문자로 작성하여 스네이크 표기법을 이용하여 작성하는 것을 권장
 	public static final double INCENTIVE_RATE = 1.5;
@@ -66,8 +65,7 @@ public abstract class Employee {
 	/*
 	//급여를 계산하여 반환하는 메소드
 	// => 자식클래스에서 부모클래스의 메소드를 오버라이드 선언하지 않아도 에러 미발생
-	// => 자식클래스에서 부모클래스의 메소드를 오버라이드 선언하지 않으면 부모클래스의 
-	//메소드 호출 - 비정상적인 결과 제공
+	// => 자식클래스에서 부모클래스의 메소드를 오버라이드 선언하지 않으면 부모클래스의 메소드 호출 - 비정상적인 결과 제공
 	 * 
 	public int computePay() {
 		return 0;
