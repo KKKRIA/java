@@ -25,7 +25,8 @@ public class AcademyStaff extends AcademyPerson {
 	
 	@Override
 	public void display() {
-		// TODO Auto-generated method stub
-		super.display();
+		System.out.println("직원번호 = "+getNum());
+		System.out.println("직원이름 = "+getName());
+		System.out.println("근무부서 = "+depart);
 	}
 }
