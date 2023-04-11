@@ -64,7 +64,7 @@ public class MemberEvent extends Member{
 		
 		//this.id = id;
 		setId(id);
-		//this.name = name;
+		//this.name = NAMe;
 		setName(name);
 		this.email = email;
 	}
