@@ -30,7 +30,7 @@ public class CarApp {
 		
 		//자동차 생성 >> 엔진을 생성하여 필드에 저장 - 포함관계 성립
 		// => 생성자를 호출하여 매개변수에 엔진정보(Engine 객체)를 전달받아 필드에 저장
-		Car carTwo=new Car("싼타페",2023,new Engine("휘발유", 3000));
+		Car carTwo=new Car("싼타페",2023, new Engine("휘발유", 3000));
 		
 		carTwo.displayCar();
 		System.out.println("=========================================================================");
