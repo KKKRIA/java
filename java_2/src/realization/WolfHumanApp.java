@@ -39,7 +39,7 @@ package realization;
 
 public class WolfHumanApp {
 	public static void main(String[] args) {
-		WolfHuman wolfHuman = new WolfHuman();
+		WolfHuman wolfHuman = new WolfHuman(); 
 		
 		wolfHuman.speak();
 		wolfHuman.walk();
