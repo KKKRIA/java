@@ -61,6 +61,7 @@ public class WolfHumanApp {
 		System.out.println("==============================================");
 		
 		
+		
 		//명시적 객체 형변환을 사용하여 자식클래스의 메소드 호출
 		((WolfHuman)human).change();
 		System.out.println("==============================================");
