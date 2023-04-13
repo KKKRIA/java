@@ -2,6 +2,8 @@ package xyz.itwill.app;
 
 
 
+
+
 //패키지(Package) : 같은 목적의 자료형(참조형)을 명확하게 구분하여 그룹화 하기 위한 단위
 // => Java 참조형 : 클래스(Class), 인터페이스(Interface), 열거형(Enum)
 // => Java 자료형을 보다 쉽게 관리하기위해 패키지를 사용
@@ -25,6 +27,9 @@ package xyz.itwill.app;
 //    불필요한 자료형에 대한 import 설정을 제거하거나 필요한 자료형에 대한 import설정을 추가하는 기능 제공 
 
 import xyz.itwill.subject.OracleSubject;
+import xyz.itwill.subject.JavaSubject;
+//자료형의 이름이 같은 경우 import 처리 불가능
+//import xyz.uniwill.subject.JavaSubject;
 
 
 public class SubjectApp {
@@ -37,8 +42,15 @@ public class SubjectApp {
 		
 		//xyz.itwill.subject.OracleSubject Subject1 =new xyz.itwill.subject.OracleSubject();
 		
-		//다른패키지에 작성된 클래스를 import처리한 경우 패키지 경로 표현없이 클래스 접근 가능
-		OracleSubject subject1 =new OracleSubject();
+		//다른 패키지에 작성된 클래스를 import 처리한 경우 패키지 경로 표현없이 클래스 접근 가능
+		OracleSubject subject1=new OracleSubject();
+		subject1.display();
 		
+		JavaSubject subject2=new JavaSubject();
+		subject2.display();
+		
+		//import 설정이 불가능 자료형은 패키지 경로를 반드시 표현해야만 접근 가능
+		xyz.uniwill.subject.JavaSubject subject3=new xyz.uniwill.subject.JavaSubject();
+		subject3.display();
 	}
 }
