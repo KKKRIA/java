@@ -29,4 +29,5 @@ public enum Compass {
 		return value;
 	}
 	
+	
 }
