@@ -9,7 +9,7 @@ package xyz.itwill.exception;
 // => Exception 클래스를 상속받아 작성된 자식클래스
 // => 프로그램 실행시 예외가 발생되면 JVM은 해당 예외에 대한 예외클래스로 객체를 생성하여 제공
 
-//Throwable 클래스 : 프로그램에서 발생되는 모든 오류정보를 저장하기 위한 부모클래스
+//Throwable 클래스 : 프로그램에서 발생되는 모든 오류정보를 저장하기 위한 부모클래스 (Exception의 부모)
 // => 자식클래스 : Error 클래스, Exception 클래스
 
 //예외의 종류
