@@ -11,4 +11,4 @@ public class ProtectedMember {
 	protected void display() {
 		System.out.println("num = "+num);
 	}
-}
+} 
