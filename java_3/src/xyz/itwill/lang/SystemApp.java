@@ -31,7 +31,7 @@ public class SystemApp {
 		int num=scanner.nextInt();
 		if(num == 0) {
 			System.out.println("[메세지]프로그램을 강제로 종료합니다");
-			//System.exit(int status): 프로그램을 강제로 종료하는 메소드
+			//System.exit(int status): 프로그램을 강제로 종료하는 메소드 //(int status)아무의미없음 0으로 전달가능
 			System.exit(0); //0이면 무조건적인 종료 , 0이 아닌값은 메모리를 정리한 후 종료(자바는 정리안함)
 		}
 		
