@@ -12,10 +12,14 @@ import java.util.Scanner;
 
 //Object 클래스 : 모든 Java 클래스가 반드시 상속받는 부모클래스
 //= >모든 Java 클래스를 대신하여 사용할 수 있는 대표클래스
-//Math 클래스 : 수학 관련 기능을 메소드로 제공하는 클래스 
-//Class 클래스 : 메모리(MethodArea)에 저장된 클래스 관련 정보를 저장하기 위한 객체를 생성하기 위한 클래스
+
+//Class 클래스 : 메모리(MethodArea)에 저장된 클래스(Class 객체 - clazz) 관련 기능을 메소들로 제공하기위한 클래스
+
+//Math 클래스 : 수학 관련 기능을 메소드로 제공하기 위한 클래스 
 
 //System 클래스 : 표준 입출력 스트림을 제공하거나 시스템 관련 기능을 메소드로 제공하는 클래스
+
+
 public class SystemApp {
 	public static void main(String[] args) {
 		//System.in : Java에서 제공되는 표준 입력장치(키보드)에 대한 입력스트림(객체)이 저장된 필드
