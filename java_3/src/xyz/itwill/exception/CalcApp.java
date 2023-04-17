@@ -2,7 +2,7 @@ package xyz.itwill.exception;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+  
 //키보드로 정수값 2개를 입력받아 첫번째 정수값으로 두번째 정수값을 나눈 몫을 계산하여 출력하는 시스템
 
 public class CalcApp {
