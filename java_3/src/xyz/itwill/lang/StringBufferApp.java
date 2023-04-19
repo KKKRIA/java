@@ -23,7 +23,7 @@ public class StringBufferApp {
 		
 		
 		//StringBuffer.append(Object o) : StringBuffer 객체에 저장된 문자열에 매개변수로 전달받은 값을 추가하는 메소드
-		// => String 객체에 저장된 문자열에 +=연산자를 사용한 효과와 동일
+		// =>★String 객체에 저장된 문자열에 +=연산자를 사용한 효과와 동일
 		sb.append("DEF");
 		System.out.println("sb=" +sb);//ABCDEF
 		
