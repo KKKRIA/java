@@ -1,4 +1,4 @@
-package xyz.itwill.lang.thread;
+package xyz.itwill.util;
 
 import java.util.Calendar;
 

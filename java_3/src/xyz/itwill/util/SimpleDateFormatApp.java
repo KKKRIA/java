@@ -1,4 +1,4 @@
-package xyz.itwill.lang.thread;
+package xyz.itwill.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

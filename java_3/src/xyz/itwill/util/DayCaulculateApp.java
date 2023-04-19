@@ -1,4 +1,4 @@
-package xyz.itwill.lang.thread;
+package xyz.itwill.util;
 
 //키보드로 생년월일을 입력받아 오늘까지 살아온 날짜(일)을 계산하여 출려하는 프로그램 작성
 //ex) 생년월일 입력[ex. 2000-01-01] >> 2023-04-18
