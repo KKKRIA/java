@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//javs.text 패키지 : 객체에 저장된 값을 변환하는 기능의 클래스(인터페이스)가 선언된 패키지
+//java.text 패키지 : 객체에 저장된 값을 변환하는 기능의 클래스(인터페이스)가 선언된 패키지
 
 //SimpleDateFormat클래스 : Date 객체와 String 객치를 서로 변환하기 위한 기능을 메소드로 제공하는 클래스
 
@@ -22,7 +22,7 @@ public class SimpleDateFormatApp {
 		//SimpleDateFormat.format(Date date) : Date 객체에 저장된 날짜와 시간을 SimpleDateFormat객체에 저장된 패턴정보를 사용하여 문자열(String객체)로 변환하여 반환하는 메소드
 		System.out.println("현재날짜 ="+printDate); //Date 객체 >> String객체
 		
-		////SimpleDateFormat.applyPattern(String pattern) :SimpleDateFormat 객체에 저장된 패턴정보를 변경하는 메소드
+		//SimpleDateFormat.applyPattern(String pattern) :SimpleDateFormat 객체에 저장된 패턴정보를 변경하는 메소드
 		dateFormat.applyPattern("yyyy-MM-dd HH:mm:ss");
 		System.out.println("현재날짜 ="+dateFormat.format(now)); 
 		

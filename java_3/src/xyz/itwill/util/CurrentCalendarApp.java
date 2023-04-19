@@ -3,7 +3,7 @@ package xyz.itwill.util;
 import java.util.Calendar;
 
 //현재 년월에 대한 달력을 출력하는 프로그램 작성
-//date로 캘린더 만들기 어려움(운년계산해야됨) >> 캘린더로 작성
+//date로 캘린더 만들기 어려움(윤년계산해야됨) >> 캘린더로 작성
 
 public class CurrentCalendarApp {
 	public static void main(String[] args) {
