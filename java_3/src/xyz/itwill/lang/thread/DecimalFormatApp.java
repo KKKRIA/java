@@ -2,7 +2,7 @@ package xyz.itwill.lang.thread;
 
 import java.text.DecimalFormat;
 
-//DecimalFormat클래스 : Number 객체 (숫자값)와 String 객체를 서로 반다로 변환하기 위한 가능을 메소드로 제공하기 위한 클래스
+//DecimalFormat클래스 : Number 객체 (숫자값)와 String 객체를 서로 반대로 변환하기 위한 가능을 메소드로 제공하기 위한 클래스
 
 public class DecimalFormatApp {
 	public static void main(String[] args) {

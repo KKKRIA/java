@@ -7,6 +7,7 @@ import java.util.Date;
 //javs.text 패키지 : 객체에 저장된 값을 변환하는 기능의 클래스(인터페이스)가 선언된 패키지
 
 //SimpleDateFormat클래스 : Date 객체와 String 객치를 서로 변환하기 위한 기능을 메소드로 제공하는 클래스
+
 public class SimpleDateFormatApp {
 	public static void main(String[] args) {
 		Date now=new Date();
