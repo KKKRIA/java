@@ -10,7 +10,7 @@ public class NewPasswordApp {
 	public static String newPasswordOne() {
 		Random random=new Random();
 		
-		//비밀번호로 사용될 문자들이 저잗왼 문자열 생성
+		//비밀번호로 사용될 문자들이 저장된 문자열 생성
 		String str ="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*";
 		
 		StringBuffer password=new StringBuffer();
