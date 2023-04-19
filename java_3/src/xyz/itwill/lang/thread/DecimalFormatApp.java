@@ -17,12 +17,12 @@ public class DecimalFormatApp {
 		System.out.println("금액 = " + decimalFormat.format(money)+"원");
 		
 		
-		//DecimalFormat.getInstance() : 기본 패턴정보가 저장된 DecimalFormat 객체를 반환하는 메소드
+		//DecimalFormat.getInstance() : 패턴정보가 저장된 DecimalFormat 객체를 반환하는 메소드
 		// =>  3자리마다 ,를 사용하여 숫자값을 표현하는 패턴정보
 		System.out.println("금액 = " + DecimalFormat.getInstance().format(money)+"원");
 		
 		
-		//DecimalFormat.getCurrencyInstance() : 기본 패턴정보가 저장된 DecimalFormat 객체를 반환하는 메소드
+		//DecimalFormat.getCurrencyInstance() : 패턴정보가 저장된 DecimalFormat 객체를 반환하는 메소드
 		// => 맨앞에 시스템이 사용하는 화폐단위를 붙이고 3자리마다 ,를 사용하여 숫자값을 표현하는 패턴정보
 		System.out.println("금액 = " + DecimalFormat.getCurrencyInstance().format(money));
 		
