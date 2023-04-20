@@ -70,7 +70,7 @@ public class BaseballGameApp {
 					if(num[i]<0 || num[i]>9) {//비정상적인 값이 입력된 경우
 						System.out.println("[에러] 숫자만 입력 가능합니다.");
 						continue loop;
-						//원래는 for 문 재실행하지만 loop라는 이름을 추가하여 위 loop while로 이동하여 반복가능
+						//원래는 for 문 재실행하지만 loop라는 라벨이름을 추가하여 위 loop while로 이동하여 반복가능
 					}
 				}
 				
