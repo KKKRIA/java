@@ -30,7 +30,7 @@ public class CurrentCalendarApp {
 		
 		//1일부터 [월]의 마지막 날짜까지 출력
 		//calendar.getActualMaximum(int field) : calendar객체에 저장된 날짜와 시간에서 매개변수로 전달받은 상수에 대한 최대값을 반환하는 메소드
-		for(int i=1; i<calendar.getActualMaximum(Calendar.DATE);i++) {
+		for(int i=1; i<=calendar.getActualMaximum(Calendar.DATE);i++) {
 			//날짜출력 >> 자릿수 맞춤
 			if(i<=9) {
 				System.out.print("    "+i);
