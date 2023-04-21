@@ -13,7 +13,7 @@ public class ComponentAddApp extends Frame{
 		// => Button 클래스의 Button(String label)생성자로 버튼의 이름이 설정된 Button 객체 생성
 		Button button=new Button("Button");
 		
-		//Container.add(Component c) : 컴테이너에 컴퍼넌트를 배치하는 메소드
+		//Container.add(Component c) : 컨테이너에 컴퍼넌트를 배치하는 메소드
 		// => 컨테이너에 설정된 배치관리자(LayoutManager)에 의해 컴퍼넌트가 출력 위치와 크기가 자동 설정되어 컨테이너에 배치
 		// => 컴퍼넌트의 배치관리자(LayoutManager)에 의해 자동 설정
 		add(button);
