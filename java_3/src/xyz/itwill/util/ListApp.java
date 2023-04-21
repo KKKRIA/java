@@ -38,12 +38,12 @@ public class ListApp {
 		System.out.println("================================================================");
 		
 		
-		//List.get(int index) : List 객체에서 index 위치에 저장된 요소값(객체)을 반환하는 메소드
+		//★★List.get(int index) : List 객체에서 index 위치에 저장된 요소값(객체)을 반환하는 메소드
 		System.out.println("3번째 위치에 저장된 문자열 = "+ list.get(2));
 		System.out.println("================================================================");
 		
 		
-		//List.add(int index, E element) : List 객체에서 index 위치에 요소를 삽입하는 메소드
+		//★★List.add(int index, E element) : List 객체에서 index 위치에 요소를 삽입하는 메소드
 		list.add(4,"장길산");
 		System.out.println("list= "+list);
 		System.out.println("================================================================");
@@ -59,7 +59,7 @@ public class ListApp {
 		System.out.println("================================================================");
 		
 		
-		//★List.set(int index, E element) : List 객체에서 index 위치에 요소값(객체)를 변경하는 메소드
+		//List.set(int index, E element) : List 객체에서 index 위치에 요소값(객체)를 변경하는 메소드
 		list.set(1, "임걱정");
 		System.out.println("list= "+list);
 		System.out.println("================================================================");
@@ -83,7 +83,7 @@ public class ListApp {
 		System.out.println("================================================================");
 		
 		
-		//List 객체에 저장된 모든 요소에 대한 일괄처리 - 향상된 for 구문 사용 ★★★많이 사용 ★★★
+		//★★List 객체에 저장된 모든 요소에 대한 일괄처리 - 향상된 for 구문 사용 ★★★많이 사용 ★★★
 		for(String str : list) {
 			System.out.println(str+" ");
 		}
@@ -104,9 +104,9 @@ public class ListApp {
 		System.out.println("================================================================");
 		
 		
-		//★List.isEmpty(): List 객체에 요소가 저장되어 있는 경우 [false]를 반환하고 List
+		//★★List.isEmpty(): List 객체에 요소가 저장되어 있는 경우 [false]를 반환하고 List
 		//객체에 저장된 요소가 없는 경우 [true]를 반환하는 메소드
-		if(list.isEmpty()) {
+		if(list.isEmpty()) {  //if(list.size() == 0){ }    <- 같은 표현
 			System.out.println("List 객체에 저장된 요소가 하나도 없습니다");
 		}
 		System.out.println("================================================================");

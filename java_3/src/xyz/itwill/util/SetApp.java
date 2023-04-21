@@ -14,15 +14,22 @@ import java.util.Set;
 public class SetApp {
 	public static void main(String[] args) {
 		//제네릭을 사용하지 않고 HashSet 클래스로 객체 생성 - 비권장
-		// => HashSet 객체에는 모든 클래스의 객체를 Object 타입으로 저장 가능
+		// => HashSet 객체에는 모든 클래스의 객체를 Object 타입으로 저장 가능(Integer, Double, String 다 사용가능)
+	
 		// => HashSet 객체에 저장된 객체를 반환받아 사용할 경우 반드시 명시적 객체 형변환 사용
 		//HashSet set=new HashSet();
+		
+		//set.add(100);
+		//set.add(12.34);
+		//set.add("홍길동");
+		
+		
 		
 		
 		//제네릭을 사용하여 HashSet 클래스로 객체 생성 - 권장
 		// => HashSet 클래스의 제네릭 타입에 전달된 클래스의 객체만 저장 가능
 		// => HashSet 객체에 저장된 객체는 명시적 객체 형변환 없이 사용 가능
-		//HashSet<String> set =new HashSet<String>(); //스트링 객체를 여러개 저장할수 있다
+		//HashSet<String> set =new HashSet<String>(); //스트링 객체를 여러개 저장할수 있다 // 스트링객체만 저장
 		
 		
 		//참조변수는 클래스가 상속받은 인터페이스(부모)를 이용하여 선언하는 것을 권장
@@ -34,6 +41,7 @@ public class SetApp {
 		//★Set.add(E element) : Set 객체에 요소를 추가하는 메소드 - 저장순서 미제공
 		//요소(Element) : 콜레션 클래스의 객체에 제네릭 타입으로 전달되어 저장된 객체
 		set.add("홍길동");
+		//set.add("12.34");//Set 객체에 String 객체를 제외한 객체를 요소로 추가할 경우 에러 발생 
 		set.add("임꺽정");
 		set.add("전우치"); // Hash set순서없이 저장됨 // 메모리가 허용하는 한도내에서 계속 요소 저장가능
 		
@@ -66,6 +74,7 @@ public class SetApp {
 		//Set.iterator() : Set 객체에 저장된 요소를 반복 처리할 수 있는 Iterator 객체를 반환하는 메소드
 		//Iterator 객체 : 콜렉션 클래스의 객체 요소를 반복 처리하기 위한 기능을 제공하는 객체
 		// => 반복 지시자 : 커서(Cursor)를 사용하여 콜렉션 객체의 요소를 반복 처리 
+		//커서 : 메모리정보를 얻기 위한 위치값 (눈에 안보임) 
 		Iterator<String> iterator=set.iterator();
 		
 		//Iterator 객체를 사용하여 Set 객체에 저장된 모든 요소에 대한 일괄처리

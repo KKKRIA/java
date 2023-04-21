@@ -22,7 +22,7 @@ public class LottoSetApp {
 			if(lottoSet.size()==6)break;	
 		}
 		//Set.toArray(E[] a) : Set 객체에 저장된 모든 요소값(객체)를 매개변수로 전달받은 배열 요소에 저장하는 메소드- Set 객체를 배열로 변환
-		Integer[] lotto=lottoSet.toArray(new Integer[0]);
+		Integer[] lotto=lottoSet.toArray(new Integer[0]);// [0] 아무거나 작성 가능
 		
 		
 		//순서가 뒤죽박죽이라 정리하기 위해 아래 Arrays 사용
