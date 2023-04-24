@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 //컴퍼넌트에서는 다양한 이벤트가 발생되며 컴퍼넌트에서 이벤트가 발생될 경우 원하는 기능을 구현하여 실행되도록 프로그램 작성- 이벤트 처리 프로그램
 
 //이벤트 처리 프로그램 작성 방법
-//1. 컴퍼넌트와 컨테이너 관련 클래스를 사용하여 디자인 클래스 작성 - UI 구형
+//1. 컴퍼넌트와 컨테이너 관련 클래스를 사용하여 디자인 클래스 작성 - UI 구현
 // => Frame 클래스를 상속받아 디자인 클래스 작성
 // => 컴퍼넌트 또는 컨테이너에서 다양한 이벤트 발생 - 이벤트 소스(Event Source)
 // => 이벤트와 관련된 XXXEvent 클래스(이벤트 정보를 저장하기 위한 클래스)로 객체가 자동 생성
@@ -43,7 +43,7 @@ public class EventHandleApp extends Frame{
 		add(exit);
 		
 		//컴퍼넌트에 이벤트 처리 객체 등록
-		// => Button 컴퍼넌트에서 ActionEvent가 발생될 경우 EventHandle 클래스의 객체를 제공받아 이벤트 처리 메소드를 자동 호출하여 이벤트 처리
+		// => Button 컴퍼넌트에서 ActionEvent가 발생될 경우 EventHandle 클래스의 객체를 제공받아 이벤트 처리 메소드를 자동 호출하여 이벤트 처0리
 		exit.addActionListener(new EventHandle());
 		
 		setBounds(800,200,300,300);
