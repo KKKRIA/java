@@ -7,6 +7,8 @@ import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//★이너클래스 사용하는것 추천★
+
 //[EXIT] 버튼을 누른 경우 프로그램을 종료하는 기능의 프로그램 작성
 //=> 이벤트 처리 클래스를 디자인 클래스의 내부 클래스로 작성 
 //=> 이벤트 처리 메소드에서 디자인 클래스의 컴퍼넌트 사용 가능
