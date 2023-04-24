@@ -22,9 +22,11 @@ public class EventSourceHanleApp extends Frame implements ActionListener{
 		exit.setFont(new Font(Font.SANS_SERIF, Font.BOLD,30));
 		add(exit);
 		
+		
 		//컴퍼넌트에서 발생된 이벤트를 this 키워드를 사용하여 현재 클래스의 객체로 이벤트 처리
 		exit.addActionListener(this);
 	
+		
 		setBounds(800,200,300,300);
 		setVisible(true);
 		

@@ -24,8 +24,10 @@ public class EventInnerHandleApp extends Frame {
 		exit.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 30));
 		add(exit);
 		
+		
 		//외부클래스의 메소드에서는 내부클래스로 객체 생성 가능
 		exit.addActionListener(new EventHandle());
+		
 		
 		setBounds(800, 200, 300, 300);
 		setVisible(true);
