@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 // ex)Button 컴퍼넌트를 누른 경우 ActionEvent 클래스로 객체 생성 - ActionEvent발생
 
 //2. 이벤트 소스에서 발생된 이벤트를 처리하기 위한 클래스 작성
-// => 이벤트를 처리하기 위한 XXXListener 인터페이스를 상속받아 이벤트 처리 클래스 작성
+// => 이벤트를 처리하기 위해 XXXListener 인터페이스를 상속받아 이벤트 처리 클래스 작성
 // ex) ActionEvent >> ActionListener 인터페이스를 상속받아 이벤트 처리 클래스 작성
 // => Listener 인터페이스에서 컴퍼넌트에서 발생된 이벤트를 처리하기 위해 추상메소드 제공
 // => Listener 인터페이스를 상속받은 자식클래스에서 추상메소드를 오버라이드 선언하여 오버라이드 선언된 메소드에 이벤트 처리 명령 작성 
@@ -62,7 +62,7 @@ public class EventHandleApp extends Frame{
 // => Button 컴퍼넌트에서 발생된 ActionEvent를 처리하기 위한 클래스
 class EventHandle implements ActionListener{
 	
-	//이벤트 처리 명을을 제공하기 위한 메소드
+	//이벤트 처리 명령을 제공하기 위한 메소드 -이벤트 처리 메소드
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		System.exit(0);
