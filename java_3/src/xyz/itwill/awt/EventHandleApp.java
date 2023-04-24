@@ -30,7 +30,7 @@ import java.awt.event.ActionListener;
 // => 이벤트 처리 객체를 제공받아 자동으로 이벤트 처리 메소드를 호출하여 이벤트 처리
 
 
-//[EXIT]버튼을 누른경우 프로그램 종료하는 GUI 프로그램 작성
+//[EXIT] 버튼을 누른 경우 프로그램을 종료하는 기능의 프로그램 작성
 public class EventHandleApp extends Frame{
 	private static final long serialVersionUID = 1L;
 
