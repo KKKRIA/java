@@ -12,11 +12,11 @@ import java.awt.Frame;
 //javax.swing 패키지 : GUI 프로그램을 작성하기 위한 클래스가 선언된 패키지- java.awt 확장 패키지
 //=> java.awt 패키지의 확장 패키지 - Java 컴퍼넌트 제공 (java.awt를 사용해야 javax.swing 패키지 사용 가능) 
 
-//컴퍼넌트(Component) : GUI 프로그램에서 사용자환경(UI - User Interface)를 구성
+//컴퍼넌트(Component) : GUI 프로그램에서 사용자환경(UI - User Interface)를 구성 (부모)
 // => Button, List, Label, Canvas, Cheackbox, Choice, Scrollbar, TextField
 
-//컨테이너(Container) : 컴퍼넌트를 배치할 수 있는 컴퍼넌트
-// => 독립적 컨테이너  : Frame, Window, Dialog 등 
+//컨테이너(Container) : 컴퍼넌트를 배치할 수 있는 컴퍼넌트 (자식)
+// => 독립적 컨테이너  : Frame, Window, Dialog 등 - 독립적으로 사용 가능
 // => 종속적 컨테이너  : Panel, ScrollPan 등 - 다른 컨테이너에 배치하여 사용 가능
 
 
