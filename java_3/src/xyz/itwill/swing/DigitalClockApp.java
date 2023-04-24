@@ -73,8 +73,7 @@ public class DigitalClockApp extends JFrame {
 		new DigitalClockApp("디지털 시계");
 	}
 	
-	//시스템의 현재 날짜와 시간을 1초마다 제공받아 JLabel 컴퍼넌트를 변경하는 기능을 제공하는
-	//스레드 클래스
+	//시스템의 현재 날짜와 시간을 1초마다 제공받아 JLabel 컴퍼넌트를 변경하는 기능을 제공하는 스레드 클래스
 	public class ClockThread extends Thread {
 		@Override
 		public void run() {
@@ -98,7 +97,6 @@ public class DigitalClockApp extends JFrame {
 					//스레드를 1초동안 일시중지
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
