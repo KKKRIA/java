@@ -24,7 +24,9 @@ import java.awt.event.ActionListener;
 
 //3. 이벤트 소스에서 이벤트가 발생되면 이벤트 처리 클래스의 객체를 제공받아 이벤트 처리 명령이 실행되도록 설정
 // => Component.addXXXListener(Listener l) 메소드 호출
-// => Component.addXXXListener(Listener l) : 컴퍼넌트의 이벤틑를 처리하기 위한 이벤트 처리 객체를 등록하기 위한 메소드
+// => Component.addXXXListener(Listener l) : 컴퍼넌트의 이벤틑를 처리하기 위한 이벤트 처리 
+//객체를 매개변수로 제공받아 등록(추가)하기 위한 메소드
+
 // => 이벤트 처리 객체를 제공받아 자동으로 이벤트 처리 메소드를 호출하여 이벤트 처리
 
 
