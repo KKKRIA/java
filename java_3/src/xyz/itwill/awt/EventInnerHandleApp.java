@@ -7,6 +7,8 @@ import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+//2번째 방법 - 이벤트처리
 //★이너클래스 사용하는것 추천★
 
 //[EXIT] 버튼을 누른 경우 프로그램을 종료하는 기능의 프로그램 작성
