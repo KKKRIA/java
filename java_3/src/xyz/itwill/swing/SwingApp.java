@@ -35,8 +35,8 @@ import javax.swing.JTextField;
 public class SwingApp extends JFrame {
 	private static final long serialVersionUID = 1L;
 
-	JTextField jTextField;
-	JTextArea jTextArea;
+	JTextField jTextField; //한줄입력 받는거
+	JTextArea jTextArea; //여러줄입력 받는거
 	
 	public SwingApp(String title) {
 		super(title);
