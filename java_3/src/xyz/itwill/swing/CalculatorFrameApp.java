@@ -173,7 +173,7 @@ public class CalculatorFrameApp extends JFrame implements ActionListener {
 			//연산식에서 연산자를 찾을 수 없는 경우 이벤트 처리 메소드 종료
 			if(index<=0) return;
 			
-			try {
+			try { 
 				int num1=Integer.parseInt(operation.substring(0, index));
 				String operator=operation.substring(index, index+1);
 				int num2=Integer.parseInt(operation.substring(index+1));
