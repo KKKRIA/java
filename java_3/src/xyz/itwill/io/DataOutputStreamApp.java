@@ -10,16 +10,13 @@ public class DataOutputStreamApp {
 		//데이타로 전달하기 위한 기능의 출력스트림을 생성하기 위한 클래스
 		DataOutputStream out=new DataOutputStream(new FileOutputStream("c:/data/data.txt"));
 		
-		//DataOutputStream.writeInt(int v) : 매개변수로 정수값을 전달받아 원시데이타로 변환
-		//하여 출력스트림으로 전달하는 메소드
+		//DataOutputStream.writeInt(int v) : 매개변수로 정수값을 전달받아 원시데이타로 변환하여 출력스트림으로 전달하는 메소드
 		out.writeInt(100);
 		
-		//DataOutputStream.writeBoolean(boolean v) : 매개변수로 논리값을 전달받아 원시데이타로
-		//변환하여 출력스트림으로 전달하는 메소드
+		//DataOutputStream.writeBoolean(boolean v) : 매개변수로 논리값을 전달받아 원시데이타로 변환하여 출력스트림으로 전달하는 메소드
 		out.writeBoolean(true);
 		
-		//DataOutputStream.writeUTF(String v) : 매개변수로 문자열을 전달받아 원시데이타로
-		//변환하여 출력스트림으로 전달하는 메소드
+		//DataOutputStream.writeUTF(String v) : 매개변수로 문자열을 전달받아 원시데이타로 변환하여 출력스트림으로 전달하는 메소드
 		out.writeUTF("홍길동");
 		
 		out.close();
