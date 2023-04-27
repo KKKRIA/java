@@ -7,7 +7,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 //클라이언트에서 보내온 메세지를 제공받아 출력하는 서버 프로그램 작성
-
 public class EchoServerApp {
 	public static void main(String[] args) {
 		ServerSocket echoServer=null;
@@ -24,7 +23,8 @@ public class EchoServerApp {
 						(new InputStreamReader(socket.getInputStream()));
 				
 				//클라이언트의 소켓과 연결된 입력스트림을 이용하여 문자열(메세지)를 반환받아 출력
-				System.out.println("["+socket.getInetAddress().getHostAddress()+"]님이 보내온 메세지="+in.readLine());
+				System.out.println("["+socket.getInetAddress().getHostAddress()
+						+"]님이 보내온 메세지 = "+in.readLine());
 				
 				socket.close();
 			}
