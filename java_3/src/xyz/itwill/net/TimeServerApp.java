@@ -61,7 +61,7 @@ public class TimeServerApp {
 			
 			
 		} catch (IOException e) {
-			System.out.println("[에러]서버네트워크에 문제가 발생되었습니다.");
+			System.out.println("[에러]서버네트워크에 문제가 발생되었습니다."); 
 		}
 	} 
 		
