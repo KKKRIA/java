@@ -39,7 +39,7 @@ public class EchoCliectApp {
 			out.flush();
 			
 			socket.close();
-		} catch (IOException e) {
+		} catch (IOException e) { 
 			System.out.println("[에러]서버에 접속할 수 없습니다.");
 		}
 	}
