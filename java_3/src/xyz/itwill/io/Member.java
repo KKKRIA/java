@@ -19,7 +19,7 @@ import java.io.Serializable;
 //회원정보(아이디, 이름, 전화번호)를 저장하기 위한 클래스 - VO클래스
 // => 객체 단위로 입력 또는 출력 처리하기 위한 클래스는 반드시 객체 직렬화 클래스로 선언
 public class Member implements Serializable {
-	//객체 직렬화 클래스는 클래스를 구분하기 위한 고유값을 저장된 serialVersionUID 필드 선언 권장
+	//객체 직렬화 클래스는 클래스를 구분하기 위한 고유값을 저장된 serialVersionUID (상수필드)필드 선언 권장
 	// 필드의 자료형은 long으로 설정하고 static과 final제한자 사용
 	// => 이클립스에서는 고유값이 저장된 serialVersionUID 필드를 자동 생성하는 기능
 	private static final long serialVersionUID = 6326262440600962470L;
