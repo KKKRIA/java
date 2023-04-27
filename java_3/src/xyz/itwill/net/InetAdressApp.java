@@ -1,5 +1,8 @@
 package xyz.itwill.net;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 //네트워크(Network) : 두 대이상의 컴퓨터에서 값을 송수신 하기 위한 기능
 
 //인터넷(Internet) : 현실 세계에 존재하는 모든 컴퓨터들을 연결한 네트워크 통신망 - 프로토콜
@@ -20,7 +23,7 @@ package xyz.itwill.net;
 //신뢰할 수 있는 데이타 전송에 통신규약 - 전송 제어 프로토콜
 // => 소켓(Socket)통신 - 1:1연결
 
-//UDP(User Datagram Protocol) : 비연결형 프로토콜(네트워크 기능을 이용한 연결 설정 없이 통신가능)로 신뢰할 수 없는 데이타 전송에 통신규약 - 사용자 데아타그램 프로토콜
+//UDP(User Datagram Protocol) : 비연결형 프로토콜(네트워크 기능을 이용한 연결 설정 없이 통신가능)로 신뢰할 수 없는 데이타 전송에 통신규약 - 사용자 데아타그램 프로토콜 
 // => 고속통신 - 1:Many 연결
 
 //응용계층 : 전송계층을 기반으로 생성된 다수의 하위 프로토콜을 사용한 응용 프로그램
@@ -51,6 +54,44 @@ package xyz.itwill.net;
 
 //방화벽(Fire wall) : 네트워크를 이용한 접속 및 데이타 전송 차단 또는 허용을 위한 시스템 (프로그램) 
 
-public class InetAdressApp {
+//java.net 패키지 : 네트워크 프로그램을 작성하기 위한 기능의 클래스가 선언된 패키지 
 
+public class InetAdressApp {
+	public static void main(String[] args) throws UnknownHostException {
+		//InetAddress 클래스 : 네트워크(IP주소 및 호스트이름) 식별자를 저장하기 위한 클래스
+		//InetAddress.getLocalHost() : 현재 사용중인 컴퓨터의 네트워크 식별자가 저장된 InetAddress 객체를 반환하는 메소드
+		// => UnknownHostException 발생(일반예외) : 호스트 이름이 컴퓨터를 검색할 수 없는 경우 발생되는 예외
+		//현재 사용중인 컴퓨터는 기본적으로 [127.0.0.1]의 IP주소가 제공되며 [localhost]라는 이름으로 호스트이름 설정
+		
+		InetAddress myComputer=InetAddress.getLocalHost();
+		
+		//InetAddress.toString() : InetAddress 객체에 저장된 네트워크 식별자를 문자열로 변환하여 반환하는 메소드
+		System.out.println("myComputer="+myComputer);
+		
+		//InetAddress.getHostName() : InetAddress 객체에 저장된 네트워크 식별자에서 호스트이름을 문자열로 변환하여 반환하는 메소드
+		System.out.println("myComputer="+myComputer.getHostName());
+		
+		//InetAddress.getAddress() : InetAddress 객체에 저장된 네트워크 식별자에서 IP 주소를 문자열로 변환하여 반환하는 메소드
+		System.out.println("myComputer="+myComputer.getAddress());
+		System.out.println("======================================================================================");
+		
+		//InetAddress.getByName() : 매개변수로 전달받은 호스트이름에 대한 네트워크 식별자가 저장된 InetAddress객체를 반환하는 메소드
+		InetAddress itwill=InetAddress.getByName("www.itwill.xyz");
+		System.out.println("[www.itwill.xyz]의 IP 주소 = "+itwill.getHostAddress());
+		System.out.println("======================================================================================");
+		
+		//InetAddress.getAllByName() : 매개변수로 전달받은 호스트이름에 대한 네트워크 식별자가 저장된 InetAddress객체의 배열을 반환하는 메소드
+		InetAddress[] naver=InetAddress.getAllByName("www.naver.com");
+		
+		for(InetAddress address : naver) {
+			System.out.println("[www.naver.com]의 IP 주소 = "+address.getHostAddress());
+		}
+		System.out.println("======================================================================================");
+		
+		
+		
+		
+		
+		
+	}
 }
