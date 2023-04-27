@@ -17,7 +17,7 @@ public class EchoCliectApp {
 		
 		try {
 			Socket socket=new Socket("192.168.13.31", 3000);
-			
+			 
 			/*
 			//소켓의 출력스트림을 제공받아 대량의 문자데이타를 전달할 수 있는 출력스트림으로 확장
 			BufferedWriter out=new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
