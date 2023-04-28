@@ -33,7 +33,7 @@ public class MessageSendApp {
 		//생성자를 사용하여 데이타를 보내기 위한 패킷정보가 저장된 DatagramPacket 객체 생성
 		DatagramPacket packet=new DatagramPacket(data, data.length, address, 4000);
 		
-		//DatagramSocket.send(DatagramPacket packet) : 매개변수로 전달받은 DatagramPacket 
+		//DatagramSocket.send(DatagramPacket packet) : 매개변수로 전달받은 DatagramPacket  
 		//객체의 패킷정보를 이용하여 데이타(패킷)를 전달하는 메소드
 		socket.send(packet);
 		
