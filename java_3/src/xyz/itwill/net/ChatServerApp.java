@@ -32,7 +32,8 @@ public class ChatServerApp {
 					//클라이언트가 접속되면 클라이언트와 연결된 Socket 객체를 반환받아 저장
 					Socket socket=chatServer.accept();
 					
-					System.out.println("[접속로그]"+socket.getInetAddress().getHostAddress()+"의 컴퓨터에서 서버에 접속 하였습니다.");
+					System.out.println("[접속로그]"+socket.getInetAddress().getHostAddress()
+							+"의 컴퓨터에서 서버에 접속 하였습니다.");
 					
 					//클라이언트와 연결된 Socket 객체가 저장된 SocketThread 객체 생성
 					// => Thread 클래스를 상속받은 스레드 클래스로 객체 생성
@@ -94,13 +95,16 @@ public class ChatServerApp {
 			String aliasName="";
 			
 			try {
-				//소켓의 입력스트림을 제공받아 대량의 문자데이타를 읽을 수 있는 입력스트림으로 확장하여 필드에 저장
+				//소켓의 입력스트림을 제공받아 대량의 문자데이타를 읽을 수 있는 
+				//입력스트림으로 확장하여 필드에 저장
 				in=new BufferedReader(new InputStreamReader(client.getInputStream()));
 				
-				//소켓의 출력스트림을 제공받아 문자열을 전달할 수 있는 출력스트림으로 확장하여 필드에 저장
+				//소켓의 출력스트림을 제공받아 문자열을 전달할 수 있는 출력스트림으로 
+				//확장하여 필드에 저장
 				// => PrintWriter 클래스의 PrintWriter(OutputStream out, boolean autuFlush)
 				//생성자를 사용하여 PrintWriter 객체 생성
-				// => autuFlush 매개변수에 [true]를 전달하면 버퍼를 사용하지 않고 무조건 출력스트림으로 데이타 전달
+				// => autuFlush 매개변수에 [true]를 전달하면 버퍼를 사용하지 않고 무조건
+				//출력스트림으로 데이타 전달
 				out=new PrintWriter(client.getOutputStream(), true);
 				
 				//클라이언트에서 보내온 대화명을 반환받아 저장
@@ -108,7 +112,8 @@ public class ChatServerApp {
 				aliasName=in.readLine();
 				
 				//현재 접속중인 모든 클라이언트에게 입장 메세지 전달
-				// => 내부클래스에서는 외부클래스의 필드 또는 메소드를 접근제한자에 상관없이 접근 가능
+				// => 내부클래스에서는 외부클래스의 필드 또는 메소드를 접근제한자에
+				//상관없이 접근 가능
 				sendMessage("["+aliasName+"]님이 입장 하였습니다.");
 				
 				//클라이언트에서 보내온 메세지를 전달받아 현재 접속중인 모든 클라이언트에게 전달
@@ -125,7 +130,8 @@ public class ChatServerApp {
 				//현재 접속중인 모든 클라이언트에게 퇴장 메세지 전달
 				sendMessage("["+aliasName+"]님이 퇴장 하였습니다.");
 
-				System.out.println("[해제로그]"+client.getInetAddress().getHostAddress()+"의 컴퓨터에서 서버 접속을 종료 하였습니다.");
+				System.out.println("[해제로그]"+client.getInetAddress().getHostAddress()
+						+"의 컴퓨터에서 서버 접속을 종료 하였습니다.");
 			}
 		}
 	}
