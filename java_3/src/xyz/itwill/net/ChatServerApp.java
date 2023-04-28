@@ -32,8 +32,7 @@ public class ChatServerApp {
 					//클라이언트가 접속되면 클라이언트와 연결된 Socket 객체를 반환받아 저장
 					Socket socket=chatServer.accept();
 					
-					System.out.println("[접속로그]"+socket.getInetAddress().getHostAddress()
-							+"의 컴퓨터에서 서버에 접속 하였습니다.");
+					System.out.println("[접속로그]"+socket.getInetAddress().getHostAddress()+"의 컴퓨터에서 서버에 접속 하였습니다.");
 					
 					//클라이언트와 연결된 Socket 객체가 저장된 SocketThread 객체 생성
 					// => Thread 클래스를 상속받은 스레드 클래스로 객체 생성
