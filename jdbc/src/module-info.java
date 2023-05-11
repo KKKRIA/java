@@ -6,5 +6,5 @@
  *
  */
 module jdbc {
-	requires java.se;
+	requires java.se; 
 }
