@@ -83,7 +83,7 @@ public class InsertStudentApp {
 			//4.Statement 객체를 사용하여 SQL 명령(INSERT,UPDATE,DELETE,SELECT)을 DBMS 서버에 전달하여 실행하고 실행결과를 반환받아 저장
 			//Statement.executeUpdate(String sql) : DML 명령을 전달하여 실행하는 메소드
 			// => DML 명령의 실행결과로 조작행의 갯수가 저장된 정수값를 반환
-			//Statement.executeQuery(String sql) : SELECT 명령을 전달하여 실행하는 메소드
+			//Statement.executeUpdate(String sql) : SELECT 명령을 전달하여 실행하는 메소드
 			// => SELECT 명령의 실행결과로 검색행이 저장된 ResultSet 객체를 반환 
 			
 			//String sql="insert into student values(1000,'홍길동','010-1234-5678','서울시 강남구','00/01/01')";
