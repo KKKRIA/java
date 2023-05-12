@@ -1,6 +1,9 @@
 package xyz.itwill.jdbc;
 
-//
-public class SelectEmpApp {
+//EMP테이블에 저장된 모든 사원정보의 사원번호,사원이름, 급여를 급여로 내림차순 정렬되도록 검색하여 출력하는 JDBC프로그램 작성
 
+public class SelectEmpApp {
+	public static void main(String[] args) {
+		
+	}
 }
