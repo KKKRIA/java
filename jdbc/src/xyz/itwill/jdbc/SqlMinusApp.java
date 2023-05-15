@@ -2,6 +2,8 @@
 //실행
 //셀렉트 처리결과 검색행 컬럼 몇개인지
 //메타데이터 컬럼 검색행 반환 ㅌ
+
+
 package xyz.itwill.jdbc;
 
 import java.io.BufferedReader;
