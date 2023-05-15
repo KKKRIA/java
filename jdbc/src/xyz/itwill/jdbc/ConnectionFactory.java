@@ -15,15 +15,15 @@ public class ConnectionFactory { //Factory :객체를 반환하는 커넥션
 	public static Connection getConnection() {
 		Connection con=null;
 		try {
-			Class.forName("Oracle.jdbc.driver.OracleDriver");
+			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			String url="jdbc:oracle:thin:@localhost:1521:xe";
-			String name="soctt";
+			String name="scott";
 			String password="tiger";
 			con=DriverManager.getConnection(url, name, password);
 			
 		}catch (Exception e) {
-			System.out.println("[에러]Connection 객체를 생성할 수 없습ㄴ디ㅏ");
+			System.out.println("[에러]Connection 객체를 생성할 수 없습니다");
 		}
 		return con;
 	}
