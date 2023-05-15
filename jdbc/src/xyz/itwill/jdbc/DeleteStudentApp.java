@@ -2,6 +2,7 @@ package xyz.itwill.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 //STYDENT 테이블에 저장된 학생정보 중 학번이 [3000]인 학생정보를 삭제하는 JDBC프로그램 작성
@@ -26,11 +27,20 @@ public class DeleteStudentApp {
 			
 			System.out.println("[메세지]"+rows +"명의 학생정보를 변경하였습니다.");
 			
-			
-		}catch (Exception e) {
-			// TODO: handle exception
-		}
-		
+		}catch (ClassNotFoundException e) {
+			System.out.println("[에러]OracleDriver 클래스를 찾을 수 없습니다.");
+		} catch (SQLException e) {
+			System.out.println("[에러]JDBC 관련 오류 = "+e.getMessage());
+		}finally {
+			try {
+				if(stmt!=null)stmt.close();
+				if(con!=null)con.close();
+			}catch (SQLException e) {
+				//e.printStackTrace();   생략가능
+			}
 		
 	}
+
+}
+
 }
