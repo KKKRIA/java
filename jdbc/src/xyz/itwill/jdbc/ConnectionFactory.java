@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//Connection 객체를 생성하여 반환하거나 JDBC관련 객체를 매개변수로 전달받아 제거하는 기능을 메소드로 제공하는 클래스
+//Connection 객체를 생성하여 반환하거나 JDBC관련 객체를 매개변수로 전달받아 제거하는 기능을 메소드로 제공하는 클래스 
 // => JDBC프로그램 작성에 필요한 공통적인 기능을 메소드로 제공
 // => 코드의 중복성을 최소화하여 프로그램의 생산성을 높이고 유지보수의 효율성을 증가
 
