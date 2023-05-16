@@ -23,12 +23,12 @@ public interface StudentDAO {
 
 	//학번을 전달받아 STUDENT 테이블에 저장된 해당 학번의 학생정보를 검색하여 반환하는 메소드
 	// => 단일행은 값 또는 DTO 객체 반환
-	StudentDTO selectStudnt(int no);
+	StudentDTO selectStudent(int no);
 	
 	//이름을 전달받아 STUDENT 테이블에 저장된 해당 이름의 학생정보를 검색하여 반환하는 메소드
 	// => 다중행은 List 객체 반환
-	List<StudentDTO> selectNameStudntList(String name);
-	
+	List<StudentDTO> selectNameStudentList(String name);
+		
 	//STUDENT 테이블에 저장된 모든 학생정보를 검색하여 반환하는 메소드
-	List<StudentDTO> selectAllStudntList();
+	List<StudentDTO> selectAllStudentList();
 }

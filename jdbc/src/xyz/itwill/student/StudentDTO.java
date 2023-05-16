@@ -1,11 +1,7 @@
 package xyz.itwill.student;
 
-//1  StudentDTO 클래스파일 만들고 > 2 StudentDAO 인터페이스파일 제작
-
-
-//DTTO (Data Transfer Object)클래스 : DAO 클래스의 메소드에 필요한 정보를 매개변수로 전달하거나 
-//메소드의 실행결과를 저장하여 반환하기 위한 클래스 - VO(Value Object)클래스
-
+//DTO(Data Transfer Object) 클래스 : DAO 클래스의 메소드에 필요한 정보(값)를 매개변수로 전달하거나
+//메소드의 실행결과를 저장하여 반환하기 위한 클래스 - VO(Value Object) 클래스
 // => 테이블의 컬럼과 1:1로 매핑되는 필드 선언 - Getter & Setter
 // => 필드의 이름은 컬럼의 이름과 동일하게 작성하는 것을 권장
 
@@ -16,34 +12,33 @@ NO       NOT NULL NUMBER(4)
 NAME              VARCHAR2(50)  
 PHONE             VARCHAR2(20)  
 ADDRESS           VARCHAR2(100) 
-BIRTHDAY          DATE     
+BIRTHDAY          DATE          
 */
 
-//STUDENT 테이블에 저장된 하나의 행(학생정보)을 저장하여 전달하기 위한 클래스
+//STUDENT 테이블에 저장된 하나의 행(학생정보)을 저장하여 전달하기 위한 클래스 
 public class StudentDTO { //필드선언
 	private int no;
 	private String name;
 	private String phone;
-	private String adress;
+	private String address;
 	private String birthday;
-	
-	
-	//생성자 : ctrl + space >> Constructor 선택
+
+	//[Ctrl]+[Space] >> Constructor 선택
 	public StudentDTO() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	//Setter
-	public StudentDTO(int no, String name, String phone, String adress, String birthday) {
+	//[Alt]+[Shift]+[S] >> 팝업메뉴 >> [O] >> 필드 선택 >> Generate
+	public StudentDTO(int no, String name, String phone, String address, String birthday) {
 		super();
 		this.no = no;
 		this.name = name;
 		this.phone = phone;
-		this.adress = adress;
+		this.address = address;
 		this.birthday = birthday;
 	}
-	
-	//Getter
+
+	//[Alt]+[Shift]+[S] >> 팝업메뉴 >> [R] >> 필드 선택 >> Generate
 	public int getNo() {
 		return no;
 	}
@@ -68,12 +63,12 @@ public class StudentDTO { //필드선언
 		this.phone = phone;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getBirthday() {
@@ -83,6 +78,4 @@ public class StudentDTO { //필드선언
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
-	
-	
 }
