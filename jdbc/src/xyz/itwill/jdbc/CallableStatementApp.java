@@ -33,7 +33,7 @@ public class CallableStatementApp {
 		
 		System.out.println("<<학생정보 삭제>>");
 		System.out.println("학번입력 >>");
-		int no=Integer.parseInt(in.readLine());
+		int no=Integer.parseInt(in.readLine()); 
 		System.out.println("====================================");
 		Connection con=ConnectionFactory.getConnection();
 		
