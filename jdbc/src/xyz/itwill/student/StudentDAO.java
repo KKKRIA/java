@@ -1,6 +1,6 @@
 package xyz.itwill.student;
 //★★중요★★ 자주사용됨
-//인터페이스부터 작성해준다
+//DTO가 있어야 DAO제작가능
 
 import java.util.List;
 

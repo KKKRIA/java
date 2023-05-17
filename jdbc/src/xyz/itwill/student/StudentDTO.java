@@ -23,8 +23,8 @@ public class StudentDTO { //필드선언
 	private String address;
 	private String birthday;
 
-	//[Ctrl]+[Space] >> Constructor 선택
-	public StudentDTO() {
+	//[Ctrl]+[Space] >> Constructor 선택 
+	public StudentDTO() { //생성자
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -78,4 +78,10 @@ public class StudentDTO { //필드선언
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
+	
+	
+	@Override
+		public String toString() {
+			return no+"\t"+name+"\t"+phone+"\t"+address+"\t"+birthday;
+		}
 }
