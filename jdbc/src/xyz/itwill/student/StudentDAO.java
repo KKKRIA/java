@@ -19,14 +19,14 @@ public interface StudentDAO {
 	
 	//int insertStudent(int no, String name, String phone, String address, String birthday);
 	// => StudentDTO 파일을 만들었으므로 StudentDTO (학생정보)로 연결
-	int insertStudent(StudentDTO stydent);
+	int insertStudent(StudentDTO student);
 	
 	//학생정보를 전달받아 STUDENT 테이블에 저장된 학생정보를 변경하고 변경행의 갯수를 반환하는 메소드
-	int updateStudent(StudentDTO stydent);
+	int updateStudent(StudentDTO student);
 	
 	//학번을 전달받아 STUDENT 테이블에 저장된 학생정보를 삭제하고 삭제행의 갯수를 반환하는 메소드
-	int deleteStudent(int no);	
-
+	int deleteStudent(int no);
+	
 	//학번을 전달받아 STUDENT 테이블에 저장된 해당 학번의 학생정보를 검색하여 반환하는 메소드
 	// => 단일행은 값 또는 DTO 객체 반환
 	StudentDTO selectStudent(int no);
