@@ -24,13 +24,14 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 
-//JAVA 프로그램(클래스)를 배포하는 방법
+//JAVA 프로그램을 배포하는 방법
 //1.프로젝트 >> 오른쪽 버튼 클릭 >> Export >> Java 선택 >> Runnable JAR File 선택
 //2.Launch configuration >> 프로그램 선택
 //3.Export destination >> Jar 파일의 경로 입력
 //4.Finish 클릭
 
-
+//JAVA 클래스 배포시
+//1.프로젝트 >> 오른쪽 버튼 클릭 >> Export >> Java 선택 >> JAR File 선택
 
 
 public class StudentGUIApp extends JFrame implements ActionListener {

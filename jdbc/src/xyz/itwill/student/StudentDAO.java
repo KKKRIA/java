@@ -1,6 +1,12 @@
 package xyz.itwill.student;
 //★★중요★★ 자주사용됨
 //DTO가 있어야 DAO제작가능
+//전달하거나 반환받을 수 있는 DTO
+//DAO 각자해보기
+
+//테이블 > DTO만들고 > 
+
+
 
 import java.util.List;
 
