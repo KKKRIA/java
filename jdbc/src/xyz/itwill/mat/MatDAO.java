@@ -4,21 +4,19 @@ import java.util.List;
 
 public interface MatDAO {
 	
-	int insertMatShop(MatDTO shop); //삽입
-	int insertMatInfo(MatDTO info);
-	
-	int updateMatShop(MatDTO shop); //변경
-	int updateMatInfo(MatDTO info); //변경
-	
-	
-	int deleteMatShop(MatDTO shop); //삭제
-	int deleteMatInfo(MatDTO info); //삭제
-	
-	MatDTO selectMat(String name); 
-	
-	List<MatDTO> selectNameshopList(String name);
-
-	
-	
+	String insterMatShop(MatDTO mat);
+	String insterMatInfo(MatDTO mat);
+	String updateMatShop(MatDTO mat);
+	String updateMatInfo(MatDTO mat);
+	String deleteMatShop(String name);
+	String deleteMatInfo(String name);	
+	MatDTO info(String info);
+	List<MatDTO> selectSearch(String search);
+	List<MatDTO> selectCategory(String category);
+	List<MatDTO> selectLocation(String location);
+	List<MatDTO> selectReview(String review);
+	List<MatDTO> selectAll();
 	
 }
+
+

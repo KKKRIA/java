@@ -8,7 +8,11 @@ import java.sql.SQLException;
 import oracle.ucp.jdbc.PoolDataSource;
 import oracle.ucp.jdbc.PoolDataSourceFactory;
 
-public abstract class JdbcDAO {
+//모든 JDBC 기능의 DAO 클래스가 상속받아 사용하기 위한 부모클래스
+// => DBCP(DataBaseConnectionPool) 객체를 생성하여 미리 Connection 객체를 생성하여 저장하고
+//DBCP 객체로부터 Connection 객체를 반환하거나 JDBC 관련 객체를 매개변수로 전달받아 제거하는 메소드
+// => 객체 생성이 목적이 아닌 상속을 목적으로 작성된 클래스이므로 추상클래스로 선언하는 것을 권장
+public abstract class MacConDAO {
 	//PoolDataSource 객체(DBCP 객체)를 저장하기 위한 필드 
 	private static PoolDataSource pds;
 	
@@ -18,7 +22,7 @@ public abstract class JdbcDAO {
 		try {
 			//PoolDataSource 객체에 Connection 객체를 미리 생성하여 저장
 			pds.setConnectionFactoryClassName("oracle.jdbc.driver.OracleDriver");
-			pds.setURL("jdbc:oracle:thin:www.itwill.xyz:1521:xe");
+			pds.setURL("jdbc:oracle:thin:@www.itwill.xyz:1521:xe");
 			pds.setUser("jdbc_team07");
 			pds.setPassword("jdbc_team07");
 			pds.setInitialPoolSize(10);
@@ -61,6 +65,15 @@ public abstract class JdbcDAO {
 	public void close(Connection con, PreparedStatement pstmt, ResultSet rs) {
 		try {
 			if(rs != null) rs.close();
+			if(pstmt != null) pstmt.close();
+			if(con != null) con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	public void close(Connection con, PreparedStatement pstmt, PreparedStatement pstmt1) {
+		try {
+			if(pstmt1 != null) pstmt1.close();
 			if(pstmt != null) pstmt.close();
 			if(con != null) con.close();
 		} catch (SQLException e) {
