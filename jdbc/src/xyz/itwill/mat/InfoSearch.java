@@ -13,16 +13,16 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class SelectSearch extends JDialog {
+public class InfoSearch extends JDialog {
    private static final long serialVersionUID = 1L;
-   
+
    
    private final JPanel contentPanel = new JPanel();
 
-   JTextField searchTF;
-   String search=null;
+   JTextField infoSearchTF;
+   String infoSearch="";
 
-   public SelectSearch(JFrame frame) {
+   public InfoSearch(JFrame frame) {
       super(frame, true);
 
       setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -46,10 +46,8 @@ public class SelectSearch extends JDialog {
          okButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                
-               search=searchTF.getText();
+               infoSearch=infoSearchTF.getText();
                dispose();
-               
-         
                
             }   
          });
@@ -69,22 +67,24 @@ public class SelectSearch extends JDialog {
       }
       
       
-      JLabel lblNewLabel = new JLabel("검색어 입력하세요.");
+      JLabel lblNewLabel = new JLabel("가게 이름을 입력해주세요.");
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel.setBounds(87, 6, 117, 23);
+      lblNewLabel.setBounds(115, 6, 152, 23);
       contentPanel.add(lblNewLabel);
 
-      searchTF = new JTextField();
-      searchTF.setBounds(22, 35, 400, 23);
-      contentPanel.add(searchTF);
-      searchTF.setColumns(10);
+      infoSearchTF = new JTextField();
+      infoSearchTF.setBounds(22, 35, 400, 23);
+      contentPanel.add(infoSearchTF);
+      infoSearchTF.setColumns(10);
 
-      JLabel lblNewLabel_1 = new JLabel("통합검색");
+      JLabel lblNewLabel_1 = new JLabel("상세정보 검색");
       lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
       lblNewLabel_1.setFont(new Font("HY견고딕", Font.BOLD, 15));
-      lblNewLabel_1.setBounds(17, 10, 74, 15);
+      lblNewLabel_1.setBounds(17, 7, 97, 18);
       contentPanel.add(lblNewLabel_1);
    }
+
+
    
 
    
