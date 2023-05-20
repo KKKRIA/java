@@ -168,7 +168,7 @@ public class MatBuilder extends JFrame {
             DefaultTableModel model=(DefaultTableModel)table.getModel();
             
             for(int i=model.getRowCount();i>0;i--) model.removeRow(0);
-            
+             
             for(MatDTO mat : matList) {
                Vector<Object> matData=new Vector<>();
                matData.add(mat.getCategory());
@@ -179,7 +179,7 @@ public class MatBuilder extends JFrame {
                model.addRow(matData);
             }
          }
-      });
+      }); 
       btnNewButton_1.setBounds(12, 227, 101, 23);
       panel.add(btnNewButton_1);
       

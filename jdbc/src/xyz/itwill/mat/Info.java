@@ -38,7 +38,7 @@ public class Info extends JDialog {
       contentPanel.add(lblNewLabel_1);
       
       
-      
+       
       table = new JTable();
       String[] columnName={"가게이름","상세주소","연락처","대표메뉴","금액","평점","음식분류"};
 

@@ -71,7 +71,7 @@ public class InfoSearch extends JDialog {
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
       lblNewLabel.setBounds(115, 6, 152, 23);
       contentPanel.add(lblNewLabel);
-
+ 
       infoSearchTF = new JTextField();
       infoSearchTF.setBounds(22, 35, 400, 23);
       contentPanel.add(infoSearchTF);
