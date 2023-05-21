@@ -21,12 +21,22 @@ public abstract class MacConDAO {
       pds=PoolDataSourceFactory.getPoolDataSource();
       try {
          //PoolDataSource 객체에 Connection 객체를 미리 생성하여 저장
-         pds.setConnectionFactoryClassName("oracle.jdbc.driver.OracleDriver");
-         pds.setURL("jdbc:oracle:thin:@www.itwill.xyz:1521:xe");
-         pds.setUser("jdbc_team07");
-         pds.setPassword("jdbc_team07");
-         pds.setInitialPoolSize(10);
-         pds.setMaxPoolSize(15);
+        
+    	 //pds.setConnectionFactoryClassName("oracle.jdbc.driver.OracleDriver");
+         //pds.setURL("jdbc:oracle:thin:@www.itwill.xyz:1521:xe");
+         //pds.setUser("jdbc_team07");
+         //pds.setPassword("jdbc_team07");
+         //pds.setInitialPoolSize(10);
+         //pds.setMaxPoolSize(15);
+    	  
+		  pds.setConnectionFactoryClassName("oracle.jdbc.driver.OracleDriver");
+	      pds.setURL("jdbc:oracle:thin:@localhost:1521:xe");
+	      pds.setUser("c##mat");
+	      pds.setPassword("mat");
+	      pds.setInitialPoolSize(10);
+	      pds.setMaxPoolSize(15);
+    	  
+    	  
       } catch (SQLException e) {
          e.printStackTrace();
       }

@@ -18,11 +18,14 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
+import javax.swing.JSeparator;
 
 public class MatBuilder extends JFrame {
    private static final long serialVersionUID = 1L;
    private JPanel contentPane;
    JTable table;
+   private JTable table_1;
    private JScrollPane sp;
 
    SelectSearch selectSearch=new SelectSearch(this);
@@ -52,17 +55,19 @@ public class MatBuilder extends JFrame {
    
    public MatBuilder() {
       setFont(new Font("Dialog", Font.PLAIN, 15));
-      setTitle("배가 고플 땐 찾아보아요 내 마음 속 맛집");
+      setTitle("MOA : 강남구 맛집만 모아 한번에!");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 800, 460);
       contentPane = new JPanel();
+      contentPane.setBackground(new Color(255, 255, 255));
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
       setContentPane(contentPane);
       contentPane.setLayout(null);
       
       JPanel panel = new JPanel();
-      panel.setBounds(5, 5, 125, 411);
+      panel.setBackground(new Color(255, 255, 255));
+      panel.setBounds(5, 5, 141, 411);
       contentPane.add(panel);
       panel.setLayout(null);
       
@@ -70,34 +75,34 @@ public class MatBuilder extends JFrame {
       
       
       //라벨들 모음
-      JLabel lblNewLabel = new JLabel("배가등에붙겠네");
+      JLabel lblNewLabel = new JLabel("MOA");
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel.setFont(new Font("돋움", Font.BOLD, 16));
-      lblNewLabel.setBounds(0, 44, 125, 38);
+      lblNewLabel.setFont(new Font("맑은 고딕", Font.BOLD, 31));
+      lblNewLabel.setBounds(15, 25, 113, 38);
       panel.add(lblNewLabel);
       
-      JLabel lblNewLabel_1 = new JLabel("빨리 찾아라");
+      JLabel lblNewLabel_1 = new JLabel("강남구 맛집");
       lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel_1.setFont(new Font("돋움", Font.BOLD, 15));
-      lblNewLabel_1.setBounds(0, 64, 125, 38);
+      lblNewLabel_1.setFont(new Font("맑은 고딕", Font.BOLD, 14));
+      lblNewLabel_1.setBounds(15, 54, 113, 38);
       panel.add(lblNewLabel_1);
       
-      JLabel lblNewLabel_2 = new JLabel("골라 골라");
-      lblNewLabel_2.setFont(new Font("돋움", Font.BOLD, 13));
+      JLabel lblNewLabel_2 = new JLabel("검색 카테고리 ");
+      lblNewLabel_2.setFont(new Font("맑은 고딕", Font.BOLD, 12));
       lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel_2.setBounds(30, 164, 64, 15);
+      lblNewLabel_2.setBounds(15, 114, 113, 15);
       panel.add(lblNewLabel_2);
       
-      JLabel lblNewLabel_3 = new JLabel("들여다 보고");
-      lblNewLabel_3.setFont(new Font("돋움", Font.BOLD, 13));
+      JLabel lblNewLabel_3 = new JLabel("자세한 정보가");
+      lblNewLabel_3.setFont(new Font("맑은 고딕", Font.BOLD, 12));
       lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel_3.setBounds(24, 293, 76, 15);
+      lblNewLabel_3.setBounds(15, 266, 113, 15);
       panel.add(lblNewLabel_3);
       
-      JLabel lblNewLabel_4 = new JLabel("빨리 찾아가");
-      lblNewLabel_4.setFont(new Font("돋움", Font.BOLD, 13));
+      JLabel lblNewLabel_4 = new JLabel("궁금하다면");
+      lblNewLabel_4.setFont(new Font("맑은 고딕", Font.BOLD, 12));
       lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel_4.setBounds(21, 311, 82, 15);
+      lblNewLabel_4.setBounds(15, 280, 113, 15);
       panel.add(lblNewLabel_4);
       
       
@@ -108,13 +113,14 @@ public class MatBuilder extends JFrame {
       String[] columnName={"음식분류","가게이름","대표메뉴","지역","평점"};
 
       
-      table=new JTable(new DefaultTableModel(columnName, 0));
-      table.setEnabled(false);
-      table.getTableHeader().setReorderingAllowed(false);
-      table.getTableHeader().setResizingAllowed(false);
+      table_1=new JTable(new DefaultTableModel(columnName, 0));
+      table_1.setFont(new Font("맑은 고딕", Font.PLAIN, 12));
+      table_1.setEnabled(false);
+      table_1.getTableHeader().setReorderingAllowed(false);
+      table_1.getTableHeader().setResizingAllowed(false);
       
-      sp=new JScrollPane(table);
-      sp.setBounds(142, 34, 630, 382);
+      sp=new JScrollPane(table_1);
+      sp.setBounds(152, 34, 620, 357);
       contentPane.add(sp);
       
       
@@ -123,8 +129,9 @@ public class MatBuilder extends JFrame {
       //버튼 생성 및 클릭시 작동하는 코드
       
       //빠르게 검색 버튼 클릭시 통합검색 작동코드 실행
-      JButton btnNewButton = new JButton("빠르게 검색");
-      btnNewButton.setFont(new Font("굴림", Font.PLAIN, 12));
+      JButton btnNewButton = new JButton("빠른 통합검색");
+      btnNewButton.setBackground(new Color(234, 234, 234));
+      btnNewButton.setFont(new Font("맑은 고딕", Font.BOLD, 11));
       btnNewButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             
@@ -149,26 +156,27 @@ public class MatBuilder extends JFrame {
             }   
          }
       });
-      btnNewButton.setBounds(12, 116, 101, 23);
+      btnNewButton.setBounds(15, 139, 113, 23);
       panel.add(btnNewButton);
       
       
       
       //음식분류로! 버튼 클릭시 음식분류별로 검색해주는 코드 실행
-      JButton btnNewButton_1 = new JButton("음식분류로!");
-      btnNewButton_1.setFont(new Font("굴림", Font.PLAIN, 12));
+      JButton btnNewButton_1 = new JButton("음식분류 검색");
+      btnNewButton_1.setBackground(new Color(234, 234, 234));
+      btnNewButton_1.setFont(new Font("맑은 고딕", Font.BOLD, 11));
       btnNewButton_1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             selectCategory.setVisible(true);
             
             List<MatDTO> matList=MatDAOImpl.getDAO().selectCategory(selectCategory.category);
             
-            if(matList.isEmpty()) JOptionPane.showMessageDialog(null, "검색 결과가 없다.");
+            if(matList.isEmpty()) JOptionPane.showMessageDialog(null, "검색 결과가 없습니다.");
             
             DefaultTableModel model=(DefaultTableModel)table.getModel();
             
             for(int i=model.getRowCount();i>0;i--) model.removeRow(0);
-             
+            
             for(MatDTO mat : matList) {
                Vector<Object> matData=new Vector<>();
                matData.add(mat.getCategory());
@@ -179,21 +187,22 @@ public class MatBuilder extends JFrame {
                model.addRow(matData);
             }
          }
-      }); 
-      btnNewButton_1.setBounds(12, 227, 101, 23);
+      });
+      btnNewButton_1.setBounds(15, 199, 113, 23);
       panel.add(btnNewButton_1);
       
       
       //평점으로! 버튼 클릭시 평점별로 검색하는 코드 실행
-      JButton btnNewButton_2_1 = new JButton("평점으로!");
-      btnNewButton_2_1.setFont(new Font("굴림", Font.PLAIN, 12));
+      JButton btnNewButton_2_1 = new JButton("평점 검색");
+      btnNewButton_2_1.setBackground(new Color(234, 234, 234));
+      btnNewButton_2_1.setFont(new Font("맑은 고딕", Font.BOLD, 11));
       btnNewButton_2_1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             selectReview.setVisible(true);
 
             List<MatDTO> matList=MatDAOImpl.getDAO().selectReview(selectReview.review);
             
-            if(matList.isEmpty()) JOptionPane.showMessageDialog(null, "검색 결과가 없다.");
+            if(matList.isEmpty()) JOptionPane.showMessageDialog(null, "검색 결과가 없습니다.");
             
             DefaultTableModel model=(DefaultTableModel)table.getModel();
             
@@ -210,19 +219,20 @@ public class MatBuilder extends JFrame {
             }
          }
       });
-      btnNewButton_2_1.setBounds(12, 260, 101, 23);
+      btnNewButton_2_1.setBounds(15, 229, 113, 23);
       panel.add(btnNewButton_2_1);
       
       
       //지역별로! 버튼 클릭시 지역별로 검색하는 코드 실행
-      JButton btnNewButton_1_1 = new JButton("지역별로!");
+      JButton btnNewButton_1_1 = new JButton("지역별 검색");
+      btnNewButton_1_1.setBackground(new Color(234, 234, 234));
       btnNewButton_1_1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             selectLocation.setVisible(true);
                   
             List<MatDTO> matList=MatDAOImpl.getDAO().selectLocation(selectLocation.location);
                   
-            if(matList.isEmpty()) JOptionPane.showMessageDialog(null, "검색 결과가 없다.");
+            if(matList.isEmpty()) JOptionPane.showMessageDialog(null, "검색 결과가 없습니다.");
                   
             DefaultTableModel model=(DefaultTableModel)table.getModel();
                   
@@ -239,13 +249,14 @@ public class MatBuilder extends JFrame {
             }
          }
       });
-      btnNewButton_1_1.setFont(new Font("굴림", Font.PLAIN, 12));
-      btnNewButton_1_1.setBounds(12, 194, 101, 23);
+      btnNewButton_1_1.setFont(new Font("맑은 고딕", Font.BOLD, 11));
+      btnNewButton_1_1.setBounds(15, 169, 113, 23);
       panel.add(btnNewButton_1_1);
       
       
       //상세검색 버튼 클릭시 가게이름으로 상세정보를 찾아주는 코드 실행
-      JButton btnNewButton_2_1_1 = new JButton("상세검색");
+      JButton btnNewButton_2_1_1 = new JButton("상세정보 보기");
+      btnNewButton_2_1_1.setBackground(new Color(234, 234, 234));
       btnNewButton_2_1_1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             infoSearch.setVisible(true);
@@ -271,26 +282,32 @@ public class MatBuilder extends JFrame {
             info.setVisible(true);
          }
       });
-      btnNewButton_2_1_1.setFont(new Font("굴림", Font.PLAIN, 12));
-      btnNewButton_2_1_1.setBounds(12, 330, 101, 23);
+      btnNewButton_2_1_1.setFont(new Font("맑은 고딕", Font.BOLD, 11));
+      btnNewButton_2_1_1.setBounds(15, 299, 113, 23);
       panel.add(btnNewButton_2_1_1);
       
       
       
       //상세검색 버튼 클릭시 가게이름으로 상세정보를 찾아주는 코드 실행
       JButton btnNewButton_2_2 = new JButton("맛집관리");
-      btnNewButton_2_2.setFont(new Font("굴림", Font.PLAIN, 12));
+      btnNewButton_2_2.setBackground(new Color(234, 234, 234));
+      btnNewButton_2_2.setFont(new Font("맑은 고딕", Font.BOLD, 11));
       btnNewButton_2_2.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             editMat.setVisible(true);
             
          }
       });
-      btnNewButton_2_2.setBounds(12, 365, 101, 23);
+      btnNewButton_2_2.setBounds(15, 364, 113, 23);
       panel.add(btnNewButton_2_2);
       
+      JSeparator separator = new JSeparator();
+      separator.setForeground(new Color(229, 229, 229));
+      separator.setBounds(15, 353, 113, 1);
+      panel.add(separator);
+      
       JTextArea textArea_1 = new JTextArea();
-      textArea_1.setBounds(142, 5, 630, 24);
+      textArea_1.setBounds(152, 5, 620, 24);
       contentPane.add(textArea_1);
       
       
@@ -313,7 +330,7 @@ public class MatBuilder extends JFrame {
          return;
       }
       
-      DefaultTableModel model=(DefaultTableModel)table.getModel();
+      DefaultTableModel model=(DefaultTableModel)table_1.getModel();
    
       for(MatDTO mat : matList) {
          Vector<Object> matData=new Vector<>();

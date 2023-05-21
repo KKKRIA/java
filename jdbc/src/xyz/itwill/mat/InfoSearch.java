@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 public class InfoSearch extends JDialog {
    private static final long serialVersionUID = 1L;
@@ -27,9 +28,10 @@ public class InfoSearch extends JDialog {
 
       setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
-      setTitle("아따 배고프다잉 빨리 검색해라");
+      setTitle("상세정보");
       setBounds(100, 100, 450, 142);
       getContentPane().setLayout(null);
+      contentPanel.setBackground(new Color(255, 255, 255));
       contentPanel.setBounds(0, 0, 434, 103);
       contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
       getContentPane().add(contentPanel);
@@ -38,8 +40,9 @@ public class InfoSearch extends JDialog {
       
       {
          JButton okButton = new JButton("검색");
-         okButton.setFont(new Font("굴림", Font.PLAIN, 11));
-         okButton.setBounds(296, 66, 57, 23);
+         okButton.setBackground(new Color(234, 234, 234));
+         okButton.setFont(new Font("맑은 고딕", Font.BOLD, 11));
+         okButton.setBounds(290, 70, 57, 23);
          contentPanel.add(okButton);
          okButton.setActionCommand("OK");
          getRootPane().setDefaultButton(okButton);
@@ -55,8 +58,9 @@ public class InfoSearch extends JDialog {
       }
       {
          JButton cancelButton = new JButton("닫기");
-         cancelButton.setFont(new Font("굴림", Font.PLAIN, 11));
-         cancelButton.setBounds(365, 66, 57, 23);
+         cancelButton.setBackground(new Color(234, 234, 234));
+         cancelButton.setFont(new Font("맑은 고딕", Font.BOLD, 11));
+         cancelButton.setBounds(350, 70, 57, 23);
          cancelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                dispose();
@@ -68,19 +72,20 @@ public class InfoSearch extends JDialog {
       
       
       JLabel lblNewLabel = new JLabel("가게 이름을 입력해주세요.");
+      lblNewLabel.setFont(new Font("맑은 고딕", Font.PLAIN, 12));
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel.setBounds(115, 6, 152, 23);
+      lblNewLabel.setBounds(125, 11, 152, 23);
       contentPanel.add(lblNewLabel);
- 
+
       infoSearchTF = new JTextField();
-      infoSearchTF.setBounds(22, 35, 400, 23);
+      infoSearchTF.setBounds(22, 35, 387, 23);
       contentPanel.add(infoSearchTF);
       infoSearchTF.setColumns(10);
 
       JLabel lblNewLabel_1 = new JLabel("상세정보 검색");
       lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel_1.setFont(new Font("HY견고딕", Font.BOLD, 15));
-      lblNewLabel_1.setBounds(17, 7, 97, 18);
+      lblNewLabel_1.setFont(new Font("맑은 고딕", Font.BOLD, 15));
+      lblNewLabel_1.setBounds(17, 14, 109, 15);
       contentPanel.add(lblNewLabel_1);
    }
 
