@@ -3,11 +3,13 @@ package xyz.itwill.mat;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.regex.Pattern;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -49,9 +51,21 @@ public class SelectSearch extends JDialog {
          okButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                
-               search=searchTF.getText();
-               dispose();
-               
+               String nameTemp = searchTF.getText();
+            if (nameTemp.equals("")) {
+               JOptionPane.showMessageDialog(null, "이름을 반드시 입력해 주세요.");
+               searchTF.requestFocus();
+               return;
+            }
+
+            String nameReg = "^[ㄱ-ㅎ가-힣A-Za-z0-9]*$";
+            if (!Pattern.matches(nameReg, nameTemp)) {
+               JOptionPane.showMessageDialog(null, "특수문자를 사용할 수 없습니다.");
+               searchTF.requestFocus();
+               return;
+            }
+            search=nameTemp;
+            dispose();
          
                
             }   
@@ -66,6 +80,7 @@ public class SelectSearch extends JDialog {
          cancelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                dispose();
+               searchTF.setText("");
             }
          });
          contentPanel.add(cancelButton);

@@ -1,5 +1,5 @@
 package xyz.itwill.mat;
- 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,7 +32,7 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
    
    //삽입
    @Override
-   public String insterMatShop(MatDTO mat) {
+   public String instertMatShop(MatDTO mat) {
       Connection con=null;
       PreparedStatement pstmt=null;
       
@@ -57,7 +57,7 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
    }
 
    @Override
-   public String insterMatInfo(MatDTO mat) {
+   public String instertMatInfo(MatDTO mat) {
       Connection con=null;
       PreparedStatement pstmt=null;
       
@@ -67,8 +67,8 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
          String sql="insert into Info values(?,?,?,?,?)";
          pstmt=con.prepareStatement(sql);
          pstmt.setString(1, mat.getName());
-         pstmt.setString(2, mat.getMenu());
-         pstmt.setString(3, mat.getAddress());
+         pstmt.setString(2, mat.getAddress());
+         pstmt.setString(3, mat.getMenu());
          pstmt.setString(4, mat.getPrice());
          pstmt.setString(5, mat.getPhone());
          
@@ -98,12 +98,12 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
       try {
          con=getConnection();
          
-         String sql="update shop set name=?,location=?,category=?,review=?";
+         String sql="update shop set location=?,category=?,review=? where name=? order by shop.name";
          pstmt=con.prepareStatement(sql);
-         pstmt.setString(1, mat.getName());
-         pstmt.setString(2, mat.getLocation());
-         pstmt.setString(3, mat.getCategory());
-         pstmt.setString(4, mat.getReview());
+         pstmt.setString(1, mat.getLocation());
+         pstmt.setString(2, mat.getCategory());
+         pstmt.setString(3, mat.getReview());
+         pstmt.setString(4, mat.getName());
          
          pstmt.executeUpdate();
          
@@ -123,13 +123,13 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
       try {
          con=getConnection();
          
-         String sql="update info set name=?,menu=?,address=?,price=?,phone=?";
+         String sql="update info set menu=?,address=?,price=?,phone=? where name=? order by shop.name";
          pstmt=con.prepareStatement(sql);
-         pstmt.setString(1, mat.getName());
-         pstmt.setString(2, mat.getMenu());
-         pstmt.setString(3, mat.getAddress());
-         pstmt.setString(4, mat.getPrice());
-         pstmt.setString(5, mat.getPhone());
+         pstmt.setString(1, mat.getMenu());
+         pstmt.setString(2, mat.getAddress());
+         pstmt.setString(3, mat.getPrice());
+         pstmt.setString(4, mat.getPhone());
+         pstmt.setString(5, mat.getName());
          
          pstmt.executeUpdate();
          
@@ -140,6 +140,42 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
       }
       return mat.getName();
    }
+   public MatDTO updateget(String get) {
+         Connection con=null;
+         PreparedStatement pstmt=null;
+         ResultSet rs=null;
+         MatDTO mat=new MatDTO();
+         
+         try {
+            con=getConnection();
+            
+            String sql="select shop.name,address,phone,menu,price,review,category,location from shop join info on shop.name=info.name where shop.name=? order by shop.name";
+            pstmt=con.prepareStatement(sql);
+            pstmt.setString(1, get);
+            
+            rs=pstmt.executeQuery();
+            
+            rs.next();
+               
+               mat.setName(rs.getString("name"));
+               mat.setAddress(rs.getString("address"));
+               mat.setPhone(rs.getString("phone"));
+               mat.setMenu(rs.getString("menu"));
+               mat.setPrice(rs.getString("price"));
+               mat.setReview(rs.getString("review"));
+               mat.setCategory(rs.getString("category"));
+               mat.setLocation(rs.getString("location"));
+               
+            
+         }catch (SQLException e) {
+            return null;
+         }finally {
+            close(con,pstmt,rs);
+         }
+         return mat;
+         
+         
+      }
    
    
    
@@ -210,7 +246,7 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
       try {
          con=getConnection();
          
-         String sql="select shop.name,address,phone,menu,price,review,category from shop join info on shop.name=info.name where shop.name=?";
+         String sql="select shop.name,address,phone,menu,price,review,category,location from shop join info on shop.name=info.name where shop.name=?";
          pstmt=con.prepareStatement(sql);
          pstmt.setString(1, info);
          
@@ -225,6 +261,7 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
             mat.setPrice(rs.getString("price"));
             mat.setReview(rs.getString("review"));
             mat.setCategory(rs.getString("category"));
+            mat.setLocation(rs.getString("location"));
             
             MatList.add(mat);
          }
@@ -257,7 +294,7 @@ public class MatDAOImpl extends MacConDAO implements MatDAO{
       try {
          con=getConnection();
          
-         String sql="select * from shop join info on shop.name=info.name where shop.name like '%'||?||'%' or location like '%'||?||'%' or category like '%'||?||'%' or review like '%'||?||'%' or  menu like '%'||?||'%'";
+         String sql="select * from shop join info on shop.name=info.name where shop.name like '%'||?||'%' or location like '%'||?||'%' or category like '%'||?||'%' or review like '%'||?||'%' or  menu like '%'||?||'%' order by shop.name" ;
          pstmt=con.prepareStatement(sql);
          pstmt.setString(1, search);
          pstmt.setString(2, search);

@@ -1,5 +1,6 @@
 package xyz.itwill.mat;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,12 +12,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.Color;
 
 public class SelectCategory extends JDialog {
    private static final long serialVersionUID = 1L;
    private final JPanel contentPanel = new JPanel();
-   String category="";
+   String category="1";
    
    public SelectCategory(JFrame frame) {
       super(frame, true);
@@ -77,7 +77,6 @@ public class SelectCategory extends JDialog {
       
       JButton btnNewButton_1_1_1 = new JButton("일식");
       btnNewButton_1_1_1.setBackground(new Color(234, 234, 234));
-      btnNewButton_1_1_1.setFont(new Font("맑은 고딕", Font.BOLD, 12));
       btnNewButton_1_1_1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             category="일식";
@@ -99,4 +98,6 @@ public class SelectCategory extends JDialog {
       btnNewButton_1_1_1_1.setBounds(342, 46, 68, 34);
       contentPanel.add(btnNewButton_1_1_1_1);
    }
+   
+   
 }

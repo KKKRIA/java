@@ -1,11 +1,11 @@
 package xyz.itwill.mat;
 
 import java.util.List;
- 
+
 public interface MatDAO {
    
-   String insterMatShop(MatDTO mat);
-   String insterMatInfo(MatDTO mat);
+   String instertMatShop(MatDTO mat);
+   String instertMatInfo(MatDTO mat);
    String updateMatShop(MatDTO mat);
    String updateMatInfo(MatDTO mat);
    String deleteMatShop(String name);
@@ -18,4 +18,3 @@ public interface MatDAO {
    List<MatDTO> selectAll();
    
 }
-
