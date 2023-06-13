@@ -30,7 +30,7 @@
 	</form>
 	<hr>
 	<div>현재 입력된 글자수 : <span id="count">0</span></div>
-	<textarea rows="7" cols="80" id="co ntent"></textarea>
+	<textarea rows="7" cols="80" id="content"></textarea>
 	
 	<script type="text/javascript">
 	//form 태그와 입력태그(input, select, textarea)의 name 속성값을 Node(Element) 객체로 표현하여 사용 가능
@@ -85,7 +85,13 @@
 			$("#loginForm").submit();
 		}
 	});
-	</script>	
 	
+	$("#content").keyup(function() {
+		//입력태그의 입력된 문자 갯수를 제공받아 변수에 저장
+		var count=$(this).val().length;		
+		
+		$("#count").text(count);
+	});
+	</script>	
 </body>
 </html>
