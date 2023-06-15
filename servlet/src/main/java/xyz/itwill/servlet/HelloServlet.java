@@ -58,7 +58,8 @@ public class HelloServlet extends HttpServlet{
 		
 		//5.클라이언트 요청에 대한 처리 명령 작성 및 출력스트림을 이용한 [응답]파일 생성
 		// => 클라이언트 요청에 대한 처리 명령에 필요한 값은 HttpServletRequest 객체로 부터 제공받아 사용
-		//PrintWriter.pringln(String str) : 출력스트림으로 문자열을 전달하는 메소드 - 응답 파일 작성
+		//PrintWriter.pringln(Object obj) : 매개변수로 제공받은 모든 형태의 값을 문자열로 변환 
+		//출력스트림으로 전달하는 메소드 - 응답파일 작성
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
 		out.println("<head>");
