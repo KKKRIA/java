@@ -7,6 +7,9 @@ package xyz.itwill.dto;
 //방명글 게시글의 글번호를 제공하기 위한 시퀸스 생성  
 //create sequence guest_seq;  
 
+//생성된 내용 확인
+//desc guest;
+
 /*
 이름      널?       유형             
 ------- -------- -------------- 
