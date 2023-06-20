@@ -29,7 +29,7 @@ public class StudentDAO extends JdbcDAO {
 		return _dao;
 	}
 	
-	//STUDENT 테이블에 저장된 모든 학생정보를 검색하여 반환하는 메소드
+	//STUDENT 테이블에 저장된 모든 학생정보를 검색하여 List 객체로 반환하는 메소드
 	public List<StudentDTO> selectStudentList() {
 		Connection con=null;
 		PreparedStatement pstmt=null;
@@ -38,12 +38,14 @@ public class StudentDAO extends JdbcDAO {
 		try {
 			con=getConnection();
 			
-			String sql="select *from student order by no";
+			String sql="select * from student order by no";
 			pstmt=con.prepareStatement(sql);
 			
 			rs=pstmt.executeQuery();
 			
 			while(rs.next()) {
+				//ResultSet 커서 위치의 행을 DTO 객체로 표현
+				// => ResultSet 커서 위치의 행에 대한 컬럼값은 DTO 객체의 필드에 매핑하여 저장
 				StudentDTO student=new StudentDTO();
 				student.setNo(rs.getInt("no"));
 				student.setName(rs.getString("name"));
@@ -51,25 +53,14 @@ public class StudentDAO extends JdbcDAO {
 				student.setAddress(rs.getString("address"));
 				student.setBirthday(rs.getString("birthday"));
 				
-				
+				//List 객체에 DTO 객체를 요소로 추가
 				studentList.add(student);
 			}
 		} catch (SQLException e) {
-			System.out.println("selectStudentList 메소드의 SQL 오류="+e.getStackTrace());
-		}finally {
+			System.out.println("[에러]selectStudentList 메소드의 SQL 오류 = "+e.getMessage());
+		} finally {
 			close(con, pstmt, rs);
 		}
 		return studentList;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-

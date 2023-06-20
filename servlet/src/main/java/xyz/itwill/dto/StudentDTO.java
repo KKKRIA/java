@@ -12,7 +12,7 @@ ADDRESS           VARCHAR2(100)
 BIRTHDAY          DATE         
 */
 
-//STUDENT 테이블의 학생정보를 저장하여 전달하기 위한 클래스
+//STUDENT 테이블의 학생정보(행)를 저장하여 전달하기 위한 클래스
 public class StudentDTO {
 	private int no;
 	private String name;
@@ -20,11 +20,12 @@ public class StudentDTO {
 	private String address;
 	private String birthday;
 	
-	
+	//Default Constructor : [Ctrl]+[Space] >> Constructor 선택
 	public StudentDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
+	//Constructor : [Alt]+[Shift]+[S] >> [O] >> 필드 선택 > Generate
 	public StudentDTO(int no, String name, String phone, String address, String birthday) {
 		super();
 		this.no = no;
@@ -34,6 +35,7 @@ public class StudentDTO {
 		this.birthday = birthday;
 	}
 
+	//Getter & Setter : [Alt]+[Shift]+[S] >> [R] >> 필드 선택 > Generate
 	public int getNo() {
 		return no;
 	}
@@ -74,11 +76,3 @@ public class StudentDTO {
 		this.birthday = birthday;
 	}
 }
-
-
-
-
-
-
-
-
