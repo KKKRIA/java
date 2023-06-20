@@ -10,11 +10,11 @@
 <%-- => JSP 문서가 변경된 후 클라이언트에 의해 요청되면 JSP 문서를 해석하여 서블릿 클래스 생성 --%>
 
 <%
-//Java 명령 작성
-Date now = new Date();
-SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
-String displayNow = dateFormat.format(now);
-%>
+	//Java 명령 작성
+	Date now = new Date();
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+	String displayNow = dateFormat.format(now);
+	%>
 
 <!DOCTYPE html>
 <html>
