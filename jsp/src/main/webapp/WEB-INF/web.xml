@@ -13,6 +13,8 @@
 	</error-page>
 	-->
 	
+	<!-- ★에러페이지 프로그램 배포전에 설정하기★-->
+	
 	<!-- error-code : 에러코드를 설정하기 위한 엘리먼트 -->
 	<error-page>
 		<error-code>500</error-code>
