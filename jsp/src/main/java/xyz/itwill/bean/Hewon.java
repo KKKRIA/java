@@ -4,20 +4,20 @@ package xyz.itwill.bean;
 // => 웹프로그램에서는 명령 실행에 필요한 값을 저장하기 위한 클래스로 생성된 객체
 
 //회원정보를 저장하기 위한 클래스 - JavaBean 클래스(웹에서 쓰면) >> VO 클래스(자바에서 쓰면), DTO 클래스(DAO에서 쓰면)
-public class Hewon {
+public class Hewon {	
 	private String name;
 	private String phone;
-	private String adress;
-
+	private String address;
+	
 	public Hewon() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Hewon(String name, String phone, String adress) {
+	public Hewon(String name, String phone, String address) {
 		super();
 		this.name = name;
 		this.phone = phone;
-		this.adress = adress;
+		this.address = address;
 	}
 
 	public String getName() {
@@ -36,13 +36,11 @@ public class Hewon {
 		this.phone = phone;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	
-	
 }
