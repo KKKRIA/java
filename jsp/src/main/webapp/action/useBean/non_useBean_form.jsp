@@ -2,8 +2,7 @@
     pageEncoding="UTF-8"%>
 <%-- 사용자로부터 회원정보를 입력받기 위한 JSP 문서 --%>
 <%-- => [회원등록] 태그를 클릭한 경우 [non_useBean_axtion.jsp]문서를 요청하여 이동 - 입력값(회원정보) 전달--%>
-
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
