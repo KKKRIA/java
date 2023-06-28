@@ -36,6 +36,9 @@
 	}
 	
 	
+	//아이디와 회원상태를 전달받아 MEMBER 테이블에 저장된 회원정보의 회원상태를 변경하는 DAO 클래스의 메소드 호출
+	MemberDAO.getDAO().updateMemberStatus(loginMember.getId(), 0);
+	
 	
 	
 %>
