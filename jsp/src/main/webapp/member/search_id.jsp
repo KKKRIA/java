@@ -1,10 +1,8 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <%-- 아이디를 검색하기 위한 정보(이름,이메일)를 입력받기 위한 JSP 문서 --%>
 <%-- => [아이디 검색] 태그를 클릭한 경우 [member/search_id_display.jsp] 문서 요청 - 입력값 전달 --%>       
-
-
 
 <style type="text/css">
 .search_tag {
@@ -43,6 +41,9 @@
 	font-weight: bold;
 }
 </style>
+
+
+
 <h1>아이디 찾기</h1>
 <form id="searchForm" name="loginForm" action="<%=request.getContextPath() %>/index.jsp?group=member&worker=search_id_display" method="post">
 	<ul class="search_tag">
@@ -80,32 +81,6 @@
 	})
 	
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
