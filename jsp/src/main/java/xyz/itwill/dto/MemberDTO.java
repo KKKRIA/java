@@ -34,7 +34,7 @@ public class MemberDTO {
 	private int memberStatus;
 	
 	public MemberDTO() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String getId() {
