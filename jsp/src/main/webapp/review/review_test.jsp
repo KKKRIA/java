@@ -9,16 +9,21 @@
 		int num=ReviewDAO.getDAO().selectNextNum();
 		review.setNum(num);
 		review.setId("abc123");
-		
+		review.setSubject("테스트-"+i);
+		review.setContent("게시글 연습-"+i);
+		review.setRef(num);
+		review.setIp("192.168.13.31");
+		review.setStatus(1);
+		ReviewDAO.getDAO().insertReview(review);
 	}
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>JSP</title>
 </head>
 <body>
-
+	<h1>500개의 테스트 게시글이 삽입 되었습니다.</h1>
 </body>
 </html>
