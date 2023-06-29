@@ -46,7 +46,7 @@ function submitCheck() {
 	
 	<%-- 전달값에 의해 form 태그로 요청하는 JSP 문서를 구분하여 실행 --%>
 	<% if(action.equals("modify")) {//[회원정보변경]인 경우 %>
-		passwordForm.action="<%=request.getContextPath()%>/index.jsp?group=member&worker=member_modify";
+		passwordForm.action="<%=request.getContextPath()%>/index.jsp?group=member&worker=member_modify"; <%-- HTml로 응답받고 싶기때문에 group, worker로 요청 --%>
 	<% } else {//[회원탈퇴]인 경우 %>
 		passwordForm.action="<%=request.getContextPath()%>/member/member_remove_action.jsp";
 	<% } %>
