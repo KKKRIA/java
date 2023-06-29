@@ -45,7 +45,7 @@
 	
 	//요청 페이지 번호에 대한 시작 게시글의 행번호를 계산하여 저장
 	//ex) 1Page : 1, 2Page : 11, 3Page : 21, 4Page : 31, ...
-	int startRow=(pageNum-1)*pageSize+1;  //(2(page)-1)*10+1 =11
+	int startRow=(pageNum-1)*pageSize+1; //(2(page)-1)*10+1 =11
 
 	//요청 페이지 번호에 대한 종료 게시글의 행번호를 계산하여 저장
 	//ex) 1Page : 10, 2Page : 20, 3Page : 30, 3Page : 40, ...
@@ -155,7 +155,7 @@ td {
 			<tr>
 				<%-- 게시글 일련번호 : REVIEW 테이블의 글번호가 아닌 게시글 일련번호로 응답 처리 --%>
 				<td><%=printNum %></td>
-				<% pageNum--; %><%-- 게시글 일련번호를 1씩 감소하여 저장 --%>
+				<% printNum--; %><%-- 게시글 일련번호를 1씩 감소하여 저장 --%>
 				
 				<%-- 제목 --%>
 				<td class="subject">
