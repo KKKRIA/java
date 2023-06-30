@@ -19,13 +19,13 @@
 
 	//전달파일을 저장할 서버 디렉토리(웹자원)의 파일 시스템 경로를 반환받아 저장
 	//String saveDirectory=application.getRealPath("/review_images");
-	String saveDirectory=request.getServletContext().getRealPath("/review_images");
+	String saveDirectory=request.getServletContext().getRealPath("/review_images"); //아팟치 톰켓 안에 있는 이미지
 	//System.out.println("saveDirectory = "+saveDirectory);
 
 	//MultipartRequest 객체 생성 - 모든 전달파일을 서버 디렉토리에 업로드 처리하여 저장
 	// => cos.jar 라이브러리 파일을 프로젝트에 반드시 빌드 처리
 	MultipartRequest multipartRequest=new MultipartRequest(request, saveDirectory
-			, 20*1024*1024, "utf-8", new DefaultFileRenamePolicy());
+			, 20*1024*1024, "utf-8", new DefaultFileRenamePolicy()); //DefaultFileRenamePolicy : 이름중복시 바꾸려고
 
 	//전달값을 반환받아 저장
 	int ref=Integer.parseInt(multipartRequest.getParameter("ref"));

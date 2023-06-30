@@ -197,16 +197,3 @@ public class ReviewDAO extends JdbcDAO {
 		return rows;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
