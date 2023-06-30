@@ -3,7 +3,6 @@ package xyz.itwill.dto;
 //create table review(num number primary key, reviewid varchar2(30), subject varchar2(500)
 //	, content varchar2(4000), reviewimg varchar2(100), regdate date, readcount number
 //	, ref number(4), restep number(4), relevel number(4), ip varchar2(20), status number(1));
-
 //create sequence review_seq; 
 
 /* 
@@ -13,7 +12,7 @@ NUM       NOT NULL NUMBER         - 글번호
 REVIEWID           VARCHAR2(30)   - 작성자(아이디)
 SUBJECT            VARCHAR2(500)  - 제목
 CONTENT            VARCHAR2(4000) - 내용
-REVIEWIMG          VARCHAR2(100)  - 이미지파일
+REVIEWIMG          VARCHAR2(100)  - 이미지파일명
 REGDATE            DATE           - 작성날짜
 READCOUNT          NUMBER         - 조회수
 REF                NUMBER(4)      - 글그룹(답글)
