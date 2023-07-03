@@ -40,7 +40,7 @@
 		//REVIEW 테이블에 저장된 게시글의 리뷰이미지 파일명을 반환받아 저장 
 		String removeImg=ReviewDAO.getDAO().selectReview(num).getReviewimg();
 		if(removeImg!=null) {//리뷰이미지 파일이 존재하는 경우 -  기존 리뷰이미지가 존재할 경우
-			//기존 리뷰이미지 파일을 삭제 처리 
+			//기존 리뷰이미지 파일을 업로드 디렉토리에서 삭제 처리 
 			new File(saveDirectory, removeImg).delete();
 		}
 	}
