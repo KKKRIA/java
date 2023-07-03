@@ -19,25 +19,33 @@
 
 	//전달파일을 저장할 서버 디렉토리(웹자원)의 파일 시스템 경로를 반환받아 저장
 	//String saveDirectory=application.getRealPath("/review_images");
-	String saveDirectory=request.getServletContext().getRealPath("/review_images"); //아팟치 톰켓 안에 있는 이미지
+	String saveDirectory=request.getServletContext().getRealPath("/review_images");
 	//System.out.println("saveDirectory = "+saveDirectory);
 
 	//MultipartRequest 객체 생성 - 모든 전달파일을 서버 디렉토리에 업로드 처리하여 저장
 	// => cos.jar 라이브러리 파일을 프로젝트에 반드시 빌드 처리
 	MultipartRequest multipartRequest=new MultipartRequest(request, saveDirectory
-			, 20*1024*1024, "utf-8", new DefaultFileRenamePolicy()); //DefaultFileRenamePolicy : 이름중복시 바꾸려고
+			, 20*1024*1024, "utf-8", new DefaultFileRenamePolicy());
 
 	//전달값을 반환받아 저장
 	int ref=Integer.parseInt(multipartRequest.getParameter("ref"));
 	int restep=Integer.parseInt(multipartRequest.getParameter("restep"));
 	int relevel=Integer.parseInt(multipartRequest.getParameter("relevel"));
 	String pageNum=multipartRequest.getParameter("pageNum");
-	String subject=multipartRequest.getParameter("subject");
+
+	//사용자로부터 입력받아 전달된 값에 태그 관련 문자값이 존재할 경우 웹프로그램 실행시 문제 발생
+	// => XSS(Cross Site Scripting) 공격 : 사용자가 악의적인 스크립트를 입력하여 페이지가 깨지거나
+	//다른 사용자의 사용을 방해하거나 쿠키 및 기타 개인 정보를 특정 사이트로 전송하는 공격
+	//String subject=multipartRequest.getParameter("subject");
+	
+	//XSS 공격을 방어하기 위해 전달값을 변환하여 필드값으로 저장
+	//String subject=Utility.stripTag(multipartRequest.getParameter("subject"));//사용자가 입력한 태그 관련 문자열을 제거하여 저장
+	String subject=Utility.escapeTag(multipartRequest.getParameter("subject"));//사용자가 입력한 태그를 문자열로 처리하여 저장
 	int status=1;//전달값이 없는 경우 - 일반글
 	if(multipartRequest.getParameter("secret")!=null) {//전달값이 있는 경우 - 비밀글
 		status=Integer.parseInt(multipartRequest.getParameter("secret"));
 	}
-	String content=multipartRequest.getParameter("content");
+	String content=Utility.escapeTag(multipartRequest.getParameter("content"));
 	//업로드 처리된 파일명을 반환받아 저장
 	String reviewimg=multipartRequest.getFilesystemName("reviewimg");
 	
@@ -80,16 +88,8 @@
 	ReviewDTO review=new ReviewDTO();
 	review.setNum(num);
 	review.setReviewid(loginMember.getId());
-	//사용자로부터 입력받아 전달된 값에 태그 관련 문자값이 존재할 경우 웹프로그램 실행시 문제 발생
-	// => XSS(Cross Site Scripting) 공격 : 사용자가 악의적인 스크립트를 입력하여 페이지가 깨지거나
-	//다른 사용자의 사용을 방해하거나 쿠키 및 기타 개인 정보를 특정 사이트로 전송하는 공격
-	//review.setSubject(subject);
-	
-	//XSS 공격을 방어하기 위해 전달값을 변환하여 필드값으로 저장
-	//review.setSubject(Utility.stripTag(subject));//사용자가 입력한 태그 관련 문자열을 제거하여 저장
-	review.setSubject(Utility.escapeTag(subject));//사용자가 입력한 태그를 문자열로 처리하여 저장
-	review.setContent(Utility.escapeTag(content));
-
+	review.setSubject(subject);
+	review.setContent(content);
 	review.setReviewimg(reviewimg);
 	review.setRef(ref);
 	review.setRestep(restep);
