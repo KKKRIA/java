@@ -17,7 +17,7 @@
 		out.println("location.href='"+request.getContextPath()+"/index.jsp?group=error&worker=error_400'");
 		out.println("</script>");
 		return;		
-	}
+	} 
 
 	//전달값을 반환받아 저장
 	int num=Integer.parseInt(request.getParameter("num"));
