@@ -104,6 +104,8 @@
 			} else {//웹프로그램 요청에 대한 비정상적인 실행결과를 받은 경우 - 에러코드(4XX 또는 5XX)
 				alert("에러코드 = "+xhr.status);
 			}
+		} else {
+			document.getElementById("display").innerHTML="<img src='images/loading.gif' width='50'>";
 		}
 	}
 	
@@ -113,8 +115,6 @@
 	</script>
 </body>
 </html>
-
-
 
 
 
