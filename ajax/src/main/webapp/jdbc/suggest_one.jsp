@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <%-- 사용자가 검색어를 입력한 경우 검색어가 포함된 제시어를 클라이언트에게 제공하는 JSP 문서 --%>
 <%-- => 사용자가 검색어를 입력할 경우 [suggest_two.jsp] 문서를 AJAX 기능으로 요청하여 검색어가
