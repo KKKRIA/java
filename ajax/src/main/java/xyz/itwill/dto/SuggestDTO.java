@@ -16,7 +16,7 @@ insert into suggest values('구글','https://www.google.com');
 insert into suggest values('아이티윌','http://www.itwill.xyz');
 
 commit;
-*/
+*/ 
 
 public class SuggestDTO {
 	private String word;
