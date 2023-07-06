@@ -9,7 +9,7 @@ import java.util.List;
 
 import xyz.itwill.dto.AjaxCommentDTO;
 
-public class AjaxCommentDAO extends JdbcDAO {
+public class AjaxCommentDAO extends JdbcDAO { 
 	private static AjaxCommentDAO _dao;
 	
 	private AjaxCommentDAO() {
