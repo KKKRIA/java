@@ -18,7 +18,7 @@
 #newsHeader {
 	padding: 5px;
 	text-align: center;
-	font-size: x-large;
+	font-size: x-large; 
 	border: 2px solid black;
 }
 

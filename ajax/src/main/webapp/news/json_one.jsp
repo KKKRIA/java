@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>AJAX</title>
 <style type="text/css">
-#newsList {
+#newsList { 
 	width: 50%;
 	margin: 0 auto;
 }
