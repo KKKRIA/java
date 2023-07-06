@@ -1,5 +1,5 @@
 <%@page import="xyz.itwill.dao.AjaxMemberDAO"%>
-<%@page import="xyz.itwill.dto.AjaxMemberDTO"%>
+<%@page import="xyz.itwill.dto.AjaxMemberDTO"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%-- 회원정보를 전달받아 AJAX_MEMEBR 테이블에 삽입하고 [member_join_result.jsp] 문서를

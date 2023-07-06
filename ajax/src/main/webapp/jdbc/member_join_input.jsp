@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <%-- 회원정보를 입력받기 위한 JSP 문서 --%>
 <%-- => [회원가입] 태그를 클릭한 경우 form 태그를 사용하여 [member_join_action.jsp] 문서를 
 POST 방식으로 요청 - 사용자 입력값(회원정보) 전달 --%>

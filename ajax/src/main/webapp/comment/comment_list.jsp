@@ -1,5 +1,5 @@
 <%@page import="xyz.itwill.util.Utility"%>
-<%@page import="xyz.itwill.dao.AjaxCommentDAO"%>
+<%@page import="xyz.itwill.dao.AjaxCommentDAO"%> 
 <%@page import="xyz.itwill.dto.AjaxCommentDTO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

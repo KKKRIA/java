@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <%-- [books.jsp] 문서를 AJAX 기능으로 요청하여 XML 데이타를 응답받아 태그로 변경하여 
 클라이언트에게 전달하여 응답하는 JSP 문서 --%>
 <%-- => XSL 문서를 사용하여 XML 데이타를 HTML 태그로 변환하여 응답 처리 --%>

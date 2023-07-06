@@ -3,7 +3,7 @@
 <%-- 회원가입 메세지를 클라이언트에게 전달하여 응답하는 JSP 문서 --%>    
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <meta charset="UTF-8">
 <title>AJAX</title>
 </head>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <!-- XSL 문서 : XSLT 데이타를 저장한 XML 문서 -->
 <!-- XSLT(eXtensible Stylesheet Language Template) : XML 기반의 언어로 작성된 파서(Parser) -->
 <!-- => XML 문서를 전달받아 HTML 문서 또는 XML 문서로 변환하기 위한 정보 제공 -->
