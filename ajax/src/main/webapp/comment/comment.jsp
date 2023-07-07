@@ -141,7 +141,7 @@ h1 {
 		</div>
 	</div>
 	
-	<script type="text/javascript"> 
+	<script type="text/javascript">  
 	displayComment();
 	
 	//[comment_list.jsp] 문서를 AJAX 기능으로 요청하여 댓글목록을 JSON 데이타로 응답받아 태그에 출력하는 함수
