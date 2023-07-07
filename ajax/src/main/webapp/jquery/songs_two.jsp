@@ -1,5 +1,5 @@
 <%@page import="java.util.Date"%>
-<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.SimpleDateFormat"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%-- 현재 날짜와 시간 및 음원챠트를 JSON 형식의 데이타로 제공하는 JSP 문서 --%>    

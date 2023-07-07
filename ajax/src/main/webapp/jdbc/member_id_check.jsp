@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<%@page import="xyz.itwill.dao.AjaxMemberDAO"%>
+<%@page import="xyz.itwill.dao.AjaxMemberDAO"%> 
 <%@page import="xyz.itwill.dto.AjaxMemberDTO"%>
 <%@ page language="java" contentType="text/xml; charset=UTF-8"
     pageEncoding="UTF-8"%>

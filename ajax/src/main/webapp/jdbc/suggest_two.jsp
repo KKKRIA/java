@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<%@page import="xyz.itwill.dao.SuggestDAO"%>
+<%@page import="xyz.itwill.dao.SuggestDAO"%> 
 <%@page import="xyz.itwill.dto.SuggestDTO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/xml; charset=UTF-8"

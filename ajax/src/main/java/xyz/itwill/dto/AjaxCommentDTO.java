@@ -4,7 +4,7 @@ package xyz.itwill.dto;
 //	    , content varchar2(500), regdate date);
 //create sequence ajax_comment_seq;    
 
-public class AjaxCommentDTO {
+public class AjaxCommentDTO { 
 	private int num;
 	private String writer;
 	private String content;

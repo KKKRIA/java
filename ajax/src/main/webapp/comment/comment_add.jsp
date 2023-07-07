@@ -1,7 +1,7 @@
 <%@page import="xyz.itwill.util.Utility"%>
-<%@page import="xyz.itwill.dao.AjaxCommentDAO"%>
+<%@page import="xyz.itwill.dao.AjaxCommentDAO"%> 
 <%@page import="xyz.itwill.dto.AjaxCommentDTO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <%-- 댓글정보를 전달받아 AJAX_COMMENT 테이블에 댓글정보로 삽입하고 실행결과를 JSON 데이타로 응답하는 JSP 문서 --%>    
 <%

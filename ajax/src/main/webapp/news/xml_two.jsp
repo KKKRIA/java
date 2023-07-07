@@ -25,3 +25,4 @@
 		<publisher>텐아시아</publisher>
 	</news>
 </newsList>
+ 

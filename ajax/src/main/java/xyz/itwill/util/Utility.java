@@ -11,4 +11,4 @@ public class Utility {
 	public static String escapeTag(String source) {
 		return source.replace("<", "&lt;").replace(">", "&gt;");
 	}
-}
+} 
