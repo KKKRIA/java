@@ -27,7 +27,7 @@
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
 <br>
-<table width=780 border=0 cellpadding=0 cellspacing=0>
+<table width=780 border=0 cellpadding=0 cellspacing=0> 
 <tr>
 	<td width="20"></td>
 	<td>
