@@ -12,7 +12,7 @@
 	UserinfoDTO loginUserinfo=(UserinfoDTO)session.getAttribute("loginUserinfo");
 	//비로그인 상태의 사용자인 경우 - 비정상적인 요청
 	if(loginUserinfo==null) {
-		response.sendRedirect("user_error.jsp");
+		response.sendRedirect("user_error.jsp"); 
 		return;
 	}
 
