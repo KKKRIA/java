@@ -28,7 +28,7 @@
 		  	<tr>
 				<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b>회원관리 - 회원목록</b></td>
 		  	</tr>
-	  	</table>  
+	  	</table>   
 	  	<br>
 	  
 	  	<table border="0" cellpadding="0" cellspacing="1" width="590" bgcolor="BBBBBB">
