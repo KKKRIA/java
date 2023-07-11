@@ -2,7 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%-- request 객체의 속성값으로 저장된 회원정보를 반환받아 클라이언트에게 전달하여 응답하는 JSP 문서 --%>
+<%-- request 객체의 속성값으로 저장된 회원목록을 반환받아 클라이언트에게 전달하여 응답하는 JSP 문서 --%>
 <%-- => 회원정보에서 [회원이름] 태그를 클릭한 경우 [view.do] 페이지 요청 - 아이디 전달 --%>
 <%-- => [회원등록] 태그를 클릭한 경우 [writeform.do] 페이지 요청 - 관리자에게만 링크 제공 --%>
 <%-- => [로그아웃] 태그를 클릭한 경우 [logout.do] 페이지 요청 --%>
@@ -28,7 +28,7 @@
 		  	<tr>
 				<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b>회원관리 - 회원목록</b></td>
 		  	</tr>
-	  	</table>   
+	  	</table>  
 	  	<br>
 	  
 	  	<table border="0" cellpadding="0" cellspacing="1" width="590" bgcolor="BBBBBB">

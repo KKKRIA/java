@@ -18,6 +18,7 @@ body {
 }
 </style>
 </head>
+
 <body>
 	<h1>에러페이지</h1>
 	<hr>
