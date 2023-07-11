@@ -19,7 +19,7 @@ public class UserinfoModelTwoDAO extends JdbcDAO {
 	static {
 		_dao=new UserinfoModelTwoDAO();	
 	}
-
+	
 	public static UserinfoModelTwoDAO getDAO() {
 		return _dao;
 	}
