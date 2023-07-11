@@ -13,7 +13,7 @@ body {
 }
 
 .message {
-	color: red;
+	color: red; 
 	font-size: 1.5em;
 }
 </style>
