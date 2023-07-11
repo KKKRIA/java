@@ -25,4 +25,4 @@ body {
 	프로그램을 요청하여 오류가 발생 하였습니다.</p>
 	<button type="button" onclick="location.href='<%=request.getContextPath()%>/loginform.do';">메인으로</button>
 </body>
-</html>
+</html> 
