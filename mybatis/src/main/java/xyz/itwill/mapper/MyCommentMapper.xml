@@ -25,4 +25,29 @@
 	<select id="selectCommentList1" resultType="MyComment1">
 		select comment_no, comment_id, comment_content, comment_date from mycomment order by comment_no desc
 	</select>
+	
+	<!--	
+	<select id="selectCommentList2" resultType="MyComment2">
+		select comment_no, comment_id, comment_content, comment_date from mycomment order by comment_no desc
+	</select>
+	  -->
+	
+	<!--
+	<select id="selectCommentList2" resultType="MyComment2">
+		select comment_no "no", comment_id "id", comment_content "content", comment_date "date" 
+			from mycomment order by comment_no desc
+	</select>
+	 --> 
+	
+	<resultMap type="MyComment2" id="myComment2ResultMap">
+		<id column="comment_no" property="no"/>
+		<result column="comment_no" property="no"/>
+		<result column="comment_content" property="content"/>
+		<result column="comment_date" property="date"/>
+	</resultMap>
+	
+	<select id="selectCommentList2" resultMap="myComment2ResultMap">
+		select comment_no, comment_id, comment_content, comment_date from mycomment order by comment_no desc
+	</select>
 </mapper>
+
