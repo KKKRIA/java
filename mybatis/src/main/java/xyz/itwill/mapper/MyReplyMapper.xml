@@ -51,6 +51,7 @@
 			, user_name from myreply join myuser on reply_id=user_id order by reply_no desc
 	</select>
 	
+
 	<!-- 검색행의 컬럼값이 필드값으로 저장된 객체를 생성하여 제공하는 resultMap 엘리먼트 -->
 	<resultMap type="MyReply" id="myReplyResultMap">
 		<id column="reply_no" property="replyNo"/>
@@ -59,6 +60,9 @@
 		<result column="reply_date" property="replyDate"/>
 		<result column="reply_comment_no" property="replyCommentNo"/>
 	</resultMap>	
+	
+	
+	
 	
 	<resultMap type="MyReplyUser" id="myReplyUserResultMap2">
 		<!-- resultMap 속성 : resultMap 엘리먼트의 식별자를 속성값으로 설정 -->
@@ -87,3 +91,6 @@
 		select reply_no, reply_id, reply_content, reply_date, reply_comment_no from myreply order by reply_no desc
 	</select>
 </mapper>
+
+
+
