@@ -13,6 +13,7 @@
 			from myreply order by reply_no desc
 	</select>
 	
+	
 	<!-- MYREPLY 테이블에 저장된 댓글 중 가장 최근에 작성된 5개 댓글만 검색하는 SELECT 명령 등록 -->
 	<!-- 문제점 : XML 기반의 매퍼 파일에서는 SQL 명령이 등록된 엘리먼트에서 비교 연산자 중
 	> 또는 < 연산자를 사용할 경우 엘리먼트를 표현하는 기호로 인식되어 에러 발생 -->
@@ -51,6 +52,9 @@
 			, user_name from myreply join myuser on reply_id=user_id order by reply_no desc
 	</select>
 	
+
+
+
 
 	<!-- 검색행의 컬럼값이 필드값으로 저장된 객체를 생성하여 제공하는 resultMap 엘리먼트 -->
 	<resultMap type="MyReply" id="myReplyResultMap">
