@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.itwill.mapper.MyHewonMapper">
+	<insert id="insertHewon" parameterType="MyHewon">
+		insert into myhewon values(#{id}, #{name}, #{phone}, #{email}, #{status})
+	</insert>
+	
+	<resultMap type="MyHewon" id="myHewonReultMap">
+		<id column="hewon_id" property="id"/>
+		<result column="hewon_name" property="name"/>
+		<result column="hewon_phone" property="phone"/>
+		<result column="hewon_email" property="email"/>
+		<result column="hewon_status" property="status"/>
+	</resultMap>
+	
+	<select id="selectHewonList" resultMap="myHewonReultMap">
+		select hewon_id, hewon_name, hewon_phone, hewon_email, hewon_status from myhewon order by hewon_id
+	</select>
+	
+	<!-- discriminator : 검색행의 컬럼값을 비교하여 매핑정보를 다르게 제공하기 위한 엘리먼트 -->
+	<!-- => 하위 엘리먼트로 case 엘리먼트를 사용하여 검색행의 컬럼값을 비교하여 매핑정보 제공 -->
+	<!-- javaType 속성 : 검색행의 비교 컬럼값에 대한 Java 자료형을 속성값으로 설정 -->
+	<!-- => Java 자료형 대신 typeAlias 엘리먼트로 제공된 별칭을 사용 가능 -->
+	<!-- column 속성 : 검색행의 비교 컬럼명을 속성값으로 설정 -->
+	<!--  
+	<resultMap type="MyHewon" id="myHewonDiscriminatorResultMap">
+		<discriminator javaType="int" column="hewon_status">
+			<case value="1">
+				<id column="hewon_id" property="id"/>
+				<result column="hewon_status" property="status"/>
+			</case>
+			<case value="2">
+				<id column="hewon_id" property="id"/>
+				<result column="hewon_name" property="name"/>
+				<result column="hewon_status" property="status"/>
+			</case>
+			<case value="3">
+				<id column="hewon_id" property="id"/>
+				<result column="hewon_name" property="name"/>
+				<result column="hewon_phone" property="phone"/>
+				<result column="hewon_status" property="status"/>
+			</case>
+			<case value="4">
+				<id column="hewon_id" property="id"/>
+				<result column="hewon_name" property="name"/>
+				<result column="hewon_phone" property="phone"/>
+				<result column="hewon_email" property="email"/>
+				<result column="hewon_status" property="status"/>
+			</case>
+		</discriminator>
+	</resultMap>
+	-->
+	
+	<!-- 모든 case 엘리먼트에 공통적인 매핑정보가 존재할 경우 discriminator 엘리먼트가 아닌
+	다른 하위 엘리먼트를 사용하여 매핑 정보 제공 가능 -->
+	<!--  
+	<resultMap type="MyHewon" id="myHewonDiscriminatorResultMap">
+		<id column="hewon_id" property="id"/>
+		<result column="hewon_status" property="status"/>
+		<discriminator javaType="int" column="hewon_status">
+			<case value="2">
+				<result column="hewon_name" property="name"/>
+			</case>
+			<case value="3">
+				<result column="hewon_name" property="name"/>
+				<result column="hewon_phone" property="phone"/>
+			</case>
+			<case value="4">
+				<result column="hewon_name" property="name"/>
+				<result column="hewon_phone" property="phone"/>
+				<result column="hewon_email" property="email"/>
+			</case>
+		</discriminator>
+	</resultMap>
+	-->
+	
+	<resultMap type="MyHewon" id="myHewonOneResultMap">
+		<id column="hewon_id" property="id"/>
+		<result column="hewon_status" property="status"/>
+	</resultMap>
+	
+	<!-- extends 속성 : resultMap 엘리먼트의 식별자를 속성값으로 설정 -->
+	<!-- => 다른 resultMap 엘리먼트의 매핑정보를 상속받아 사용하기 위한 속성 -->
+	<resultMap type="MyHewon" id="myHewonTwoResultMap" extends="myHewonOneResultMap">
+		<result column="hewon_name" property="name"/>
+	</resultMap>
+	
+	<resultMap type="MyHewon" id="myHewonThreeResultMap" extends="myHewonTwoResultMap">
+		<result column="hewon_phone" property="phone"/>
+	</resultMap>
+	
+	<resultMap type="MyHewon" id="myHewonFourResultMap" extends="myHewonThreeResultMap">
+		<result column="hewon_email" property="email"/>
+	</resultMap>
+	
+	<resultMap type="MyHewon" id="myHewonDiscriminatorResultMap">
+		<discriminator javaType="int" column="hewon_status">
+			<!-- case 엘리먼트에 resultMap 속성을 사용하여 다른 resultMap 엘리먼트의 매핑정보를 제공받아 사용 가능 -->
+			<case value="1" resultMap="myHewonOneResultMap"/>
+			<case value="2" resultMap="myHewonTwoResultMap"/>
+			<case value="3" resultMap="myHewonThreeResultMap"/>
+			<case value="4" resultMap="myHewonFourResultMap"/>
+		</discriminator>
+	</resultMap>
+	
+	<select id="selectDiscriminatorHewonList" resultMap="myHewonDiscriminatorResultMap">
+		select hewon_id, hewon_name, hewon_phone, hewon_email, hewon_status from myhewon order by hewon_id
+	</select>
+	
+	<!-- 매퍼에 등록된 SQL 명령에 필요한 값을 전달하는 방법 -->
+	<!-- => 전달값은 SQL 명령에서 #{변수명|필드명|맵키} 형식으로 표현하여 사용 -->
+	<!-- 1. XML 기반의 매퍼 파일에서 SQL 명령이 등록된 엘리먼트의 parmeterType 속성값으로
+	Java 자료형(별칭)을 설정하여 값을 전달받아 SQL 명령에서 사용 -->
+	<!-- => 단일값을 전달받기 위해 parameterType 속성에 원시형(PrimitivaType - Wrapper 클래스) -->
+	
+</mapper>
+
+
+
+
+
+
+
+
+

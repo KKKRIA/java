@@ -296,6 +296,3 @@
 			comment_no=reply_comment_no where comment_no=#{commentNo} order by reply_no desc
 	</select> 
 </mapper>
-
-
-
