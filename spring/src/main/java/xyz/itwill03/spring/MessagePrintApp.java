@@ -13,7 +13,7 @@ public class MessagePrintApp {
 		*/
 		
 		//ApplicationContext 객체 : Spring Container 기능을 제공하기 위한 객체
-		// => Spring Bean Configuration File(XML)을 제공받아 객체(Spring Bean) 생성
+		// => Spring Bean Configuration File(XML)을 제공받아 객체(Spring Bean)를 생성하여 관리
 		ApplicationContext context=new ClassPathXmlApplicationContext("03_message.xml");
 		
 		//Spring 컨테이너에세 필요한 Spring Bean(객체)를 제공받아 저장
