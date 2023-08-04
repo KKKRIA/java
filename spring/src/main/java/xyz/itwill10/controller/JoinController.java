@@ -4,11 +4,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 
 @Controller
 public class JoinController {
@@ -126,11 +124,11 @@ public class JoinController {
 		return "same_form";
 	}
 	
-	//같은 이름으로 전달된 값이 있는 경우 다수의 문자열을 저장한 배열을 저장할 수 있는 매개변수를 작성하여 전달값을 
-	//매개변수를 작성하여 전달된 값이 있는 경우 배열을 저장할 수 이배열로 제공받아 저장 
+	//같은 이름으로 전달된 값이 있는 경우 배열을 저장할 수 있는 매개변수를 작성하여 전달값을
+	//문자열 배열로 제공받아 저장
 	@RequestMapping(value = "/same_param", method = RequestMethod.POST)
-	public String input(@RequestParam String[] food,.BindingResult MoModel model) {
-		mo
+	public String input(@RequestParam String[] food, Model model) {
+		model.addAttribute("food", food);
 		return "same_display";
 	}
 }
