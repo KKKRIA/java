@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 //3.Model 객체의 addAttribute() 메소드를 호출하여 처리결과를 속성값으로 저장하여 제공
 
 @Controller
-public class ResultController { 
+public class ResultController {
 	/*
 	@RequestMapping("/resultMav")
 	public ModelAndView modelAndViewResult() {
