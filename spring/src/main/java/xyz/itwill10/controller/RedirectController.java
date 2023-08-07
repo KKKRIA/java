@@ -11,6 +11,6 @@ public class RedirectController {
 		
 		model.addAttribute("name", "홍길동");
 		
-		return "display_forward";
+		return "display_forward"; 
 	}
 }
