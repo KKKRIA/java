@@ -20,6 +20,9 @@ import xyz.itwill10.service.PointBoardService;
 //2.Spring Bean Configuration File(root-context.xml)에 TransactionManager 관련 클래스를 Spring Bean으로 등록
 //3.Spring Bean Configuration File(servlet-context.xml)에 트렌젝션 처리를 위한 AOP 설정
 
+
+
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
