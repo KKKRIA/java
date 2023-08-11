@@ -8,6 +8,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
+import xyz.itwill10.dto.FileBoard;
 
 //파일을 전달받아 서버 디렉토리에 업로드 처리하기 위한 방법
 //1.commons-fileupload 라이브러리를 프로젝트 빌드 처리 - 메이븐 : pom.xml
@@ -148,6 +150,18 @@ public class FileController {
 		return "file/upload_success_two";
 	}
 	
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public String fileBoardWrite() {
+		return "file/board_write";
+	}
+	
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public String fileBoardWrite(@ModelAttribute FileBoard fileBoard) {
+		if(fileBoard.getMultipartFile().isEmpty()) {
+			return "file/board_write";
+		}
+		return "file/board_write";
+	}
 	
 }
 
