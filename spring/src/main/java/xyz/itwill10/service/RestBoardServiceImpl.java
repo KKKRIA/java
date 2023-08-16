@@ -49,7 +49,7 @@ public class RestBoardServiceImpl implements RestBoardService{
 		int totalBoard=restBoardDAO.selectRestBoardCount();
 		
 		Pager pager=new Pager(pageNum, totalBoard,5,5);
-		 
+		  
 		Map<String, Object> pageMap=new HashMap<String, Object>();
 		pageMap.put("startRow", pager.getStartRow());
 		pageMap.put("endRow", pager.getEndRow());
