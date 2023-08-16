@@ -41,7 +41,7 @@ public class RestBoardDAOImpl implements RestBoardDAO {
 	}
 
 	@Override
-	public List<RestBoard> selectRestBoardList(Map<String, Object> map){
+	public List<RestBoard> selectRestBoardList(Map<String, Object> map) {
 		return sqlSession.getMapper(RestBoardMapper.class).selectRestBoardList(map);
 	}
 }
