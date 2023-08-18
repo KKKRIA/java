@@ -11,7 +11,7 @@
 	<delete id="deleteFileBoard">
 		delete from fileboard where idx=#{idx}
 	</delete>
-	 
+	
 	<select id="selectFileBoard" resultType="FileBoard">
 		select idx, writer, subject, origin, upload from fileboard where idx=#{idx}
 	</select>
@@ -31,6 +31,7 @@
 		select count(*) from fileboard
 	</select>
 </mapper>
+
 
 
 

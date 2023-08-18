@@ -8,10 +8,10 @@ import xyz.itwill10.exception.LoginAuthFailException;
 import xyz.itwill10.exception.UserinfoNotFoundException;
 
 public interface UserinfoService {
-	void addUserinfo(Userinfo userinfo ) throws ExistsUserinfoException;
+	void addUserinfo(Userinfo userinfo) throws ExistsUserinfoException;
 	void modifyUserinfo(Userinfo userinfo) throws UserinfoNotFoundException;
-	void removeUserinfo(String userinfo) throws UserinfoNotFoundException;
-	Userinfo getUserinfo(String userinfo) throws UserinfoNotFoundException;
+	void removeUserinfo(String userid) throws UserinfoNotFoundException;
+	Userinfo getUserinfo(String userid) throws UserinfoNotFoundException;
 	List<Userinfo> getUserinfoList();
-	Userinfo loginAuth(Userinfo userinfo) throws LoginAuthFailException ;
-} 
+	Userinfo loginAuth(Userinfo userinfo) throws LoginAuthFailException;
+}
