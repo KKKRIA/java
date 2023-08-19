@@ -9,8 +9,7 @@
 <body>
 	<h1>출력페이지</h1>
 	<hr>
-	<p>아이디 =${id }</p>
-	<p>이름 =${name }</p>
-	
-</body>
+	<p>아이디 = ${id }</p>
+	<p>이름 = ${name}</p>
+</body>	
 </html>

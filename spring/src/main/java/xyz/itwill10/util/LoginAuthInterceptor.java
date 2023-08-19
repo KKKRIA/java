@@ -26,5 +26,4 @@ public class LoginAuthInterceptor implements HandlerInterceptor {
 		
 		return true;//요청 처리 메소드 호출
 	}
-
 }
