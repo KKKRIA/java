@@ -247,6 +247,14 @@
 		$(".insert").val("");//입력태그 초기화
 		$("#insertDiv").hide();//태그 숨김
 	});
+	
+	//게시글의 [변경] 태그를 클릭한 경우 호출되는 이벤트 처리 함수
+	// => 글번호를 전달받아 RESTBOARD 테이블에 저장된 해당 글번호의 게시글을 검색하여 반환하는
+	//Restful API를 비동기실을 요청하여 실행결과를 JSON 
+	function modify(idx) {
+		
+	}
+	
 	</script>
 </body>
 </html>
