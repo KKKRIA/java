@@ -12,7 +12,7 @@ public class MessagePrintApp {
 		print.messagePrint();
 		*/
 		
-		//ApplicationContext 객체 : Spring Container 기능을 제공하기 위한 객체
+		//ApplicationContext 객체 : 스프링 컨테이너(Spring Container) 기능을 제공하기 위한 객체
 		// => Spring Bean Configuration File(XML)을 제공받아 객체(Spring Bean)를 생성하여 관리
 		ApplicationContext context=new ClassPathXmlApplicationContext("03_message.xml");
 		
@@ -27,6 +27,7 @@ public class MessagePrintApp {
 		((ClassPathXmlApplicationContext)context).close();
 	}
 }
+
 
 
 

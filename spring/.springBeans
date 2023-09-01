@@ -10,9 +10,7 @@
 		<config>src/main/resources/03_message.xml</config>
 		<config>src/main/resources/04-1_beanCreate.xml</config>
 		<config>src/main/resources/04-2_beanAttribute.xml</config>
-		<config>src/main/resources/04-3_beanAnntationBeanApp.xml</config>
 		<config>src/main/resources/05-1_di.xml</config>
-		<config>src/main/resources/05-2 collection.xml</config>
 		<config>src/main/resources/05-3_autowire.xml</config>
 		<config>src/main/resources/05-4_diAnnotation.xml</config>
 		<config>src/main/resources/05-5_lombok.xml</config>

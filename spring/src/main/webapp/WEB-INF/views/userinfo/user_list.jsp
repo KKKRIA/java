@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%-- request 객체의 속성값으로 저장된 회원목록을 반환받아 클라이언트에게 전달하여 응답하는 JSP 문서 --%>

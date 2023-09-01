@@ -11,6 +11,7 @@ public class ExecutionTimeApp {
 		bean.one();
 		System.out.println("==========================================================");
 		bean.two();
-		((ClassPathXmlApplicationContext)context).close();	
+		System.out.println("==========================================================");
+		((ClassPathXmlApplicationContext)context).close();			
 	}
 }

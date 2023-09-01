@@ -20,4 +20,4 @@ public class LogHelloWorldApp {
 		System.out.println("message = "+message);
 		logger.info("종료");
 	}
-} 
+}
