@@ -13,9 +13,9 @@ create sequence security_board_seq;
 
 @Data
 public class SecurityBoard {
-	private int idx;
-	private String writer;
-	private String subject;
-	private String content;
-	private Date regdate;
+	private int idx;         //게시글 번호
+	private String writer;   //작성자
+	private String subject;  //제목
+	private String content;  //내용
+	private Date regdate;    //작성일
 }
